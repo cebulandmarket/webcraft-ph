@@ -15,8 +15,9 @@
 </head>
 <body>
 
-    <!-- CURSOR GLOW -->
+    <!-- GLOBAL EFFECTS -->
     <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="noise-overlay"></div>
 
     <!-- NAV -->
     <nav class="nav" id="nav">
@@ -54,7 +55,7 @@
             </h1>
             <p class="hero-sub anim-slide-up d2">Custom-coded, lightning-fast, mobile-first websites for Philippine businesses. No templates. No bloat. Just results that convert.</p>
             <div class="hero-buttons anim-slide-up d3">
-                <a href="#contact" class="btn btn-glow btn-lg">
+                <a href="#contact" class="btn btn-glow btn-lg magnetic" data-magnetic>
                     <span>Get a Free Quote</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
@@ -125,11 +126,14 @@
     </section>
 
     <!-- SERVICES — BENTO GRID -->
-    <section id="services" class="section sec-full-dark">
-        <div class="container">
+    <section id="services" class="section sec-full-dark has-grid-bg">
+        <div class="grid-bg"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="container" style="position:relative;z-index:2;">
             <div class="section-header reveal">
                 <div class="section-tag">// what we do</div>
-                <h2>Your Competitors Already Have a Website.<br><span class="gradient-text">Do You?</span></h2>
+                <h2>Your Competitors Already Have a Website.<br><span class="glitch-text" data-text="Do You?">Do You?</span></h2>
             </div>
             <div class="bento reveal">
                 <div class="bento-card bento-wide tilt-card">
@@ -183,8 +187,10 @@
     </section>
 
     <!-- PORTFOLIO -->
+    <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1440,40 L1440,60 L0,60 Z" fill="#0c0c1d"/></svg>
     <section id="portfolio" class="section sec-full-dark portfolio-section">
-        <div class="container">
+        <div class="orb orb-3"></div>
+        <div class="container" style="position:relative;z-index:2;">
             <div class="section-header reveal">
                 <div class="section-tag">// shipped & live</div>
                 <h2>We Don't Just Talk.<br><span class="gradient-text">We Ship.</span></h2>
@@ -306,57 +312,51 @@
     </section>
 
     <!-- PROCESS -->
-    <section id="process" class="section section-dark">
+    <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#06060f"/></svg>
+    <section id="process" class="section sec-full-dark has-grid-bg">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// process</div>
-                <h2>How It Works</h2>
-                <p>From message to live website in days, not months</p>
+                <div class="section-tag">// how it works</div>
+                <h2>Message Us Today.<br><span class="gradient-text">Go Live This Week.</span></h2>
             </div>
-            <div class="process-timeline reveal">
-                <div class="process-step">
-                    <div class="step-icon">
-                        <div class="step-ring"></div>
-                        <span>01</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Tell Us What You Need</h3>
-                        <p>Send a message. Describe your business and what you want. We reply within 24 hours.</p>
-                    </div>
+            <div class="process-cards reveal">
+                <div class="proc-card tilt-card">
+                    <div class="card-shine"></div>
+                    <div class="proc-num">01</div>
+                    <div class="proc-line-glow"></div>
+                    <h3>Send Us a Message</h3>
+                    <p>Tell us about your business. What you need, your budget, your vision. We reply in under 24 hours.</p>
+                    <div class="proc-tag">&#8987; Takes 2 minutes</div>
                 </div>
-                <div class="process-connector"><div class="connector-line"></div></div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <div class="step-ring"></div>
-                        <span>02</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>We Build It</h3>
-                        <p>We design and code from scratch. You get a preview link to review before going live.</p>
-                    </div>
+                <div class="proc-arrow">&#8594;</div>
+                <div class="proc-card tilt-card">
+                    <div class="card-shine"></div>
+                    <div class="proc-num">02</div>
+                    <div class="proc-line-glow"></div>
+                    <h3>We Build It From Scratch</h3>
+                    <p>Custom design. Custom code. You get a preview link to review. We refine until you love it.</p>
+                    <div class="proc-tag">&#9889; 1-5 days</div>
                 </div>
-                <div class="process-connector"><div class="connector-line"></div></div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <div class="step-ring"></div>
-                        <span>03</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Go Live</h3>
-                        <p>We deploy, set up your domain, and configure Google. You're officially online.</p>
-                    </div>
+                <div class="proc-arrow">&#8594;</div>
+                <div class="proc-card tilt-card">
+                    <div class="card-shine"></div>
+                    <div class="proc-num">03</div>
+                    <div class="proc-line-glow"></div>
+                    <h3>You're Live</h3>
+                    <p>Domain set up. Google configured. Your business is officially online and findable. Done.</p>
+                    <div class="proc-tag">&#127881; You're online</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PRICING -->
-    <section id="pricing" class="section">
+    <section id="pricing" class="section sec-full-dark pricing-section">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// pricing</div>
-                <h2>Simple, Honest Pricing</h2>
-                <p>No hidden fees. No surprises. You know exactly what you pay.</p>
+                <div class="section-tag">// invest in your business</div>
+                <h2>One Payment. Your Business Online.<br><span class="gradient-text">Forever.</span></h2>
+                <p>No subscriptions. No hidden fees. Pay once, own it forever.</p>
             </div>
             <div class="pricing-grid reveal">
                 <div class="price-card tilt-card">
@@ -364,14 +364,15 @@
                     <div class="pc-header">
                         <div class="pc-tier">Starter</div>
                         <div class="pc-price">&#8369;5,000</div>
-                        <div class="pc-note">one-time</div>
+                        <div class="pc-note">one-time payment</div>
                     </div>
+                    <div class="pc-desc">Perfect for new businesses that need a professional online presence fast.</div>
                     <ul class="pc-list">
                         <li>1-3 page website</li>
                         <li>Mobile responsive</li>
                         <li>Contact form</li>
                         <li>Free hosting setup</li>
-                        <li>24-48 hour delivery</li>
+                        <li>Delivered in 24-48 hours</li>
                     </ul>
                     <a href="#contact" class="btn btn-price">Get Started</a>
                 </div>
@@ -381,16 +382,17 @@
                     <div class="pc-header">
                         <div class="pc-tier">Business</div>
                         <div class="pc-price">&#8369;10,000</div>
-                        <div class="pc-note">one-time</div>
+                        <div class="pc-note">one-time payment</div>
                     </div>
+                    <div class="pc-desc">For businesses ready to dominate their market with a full online presence.</div>
                     <ul class="pc-list">
                         <li>5-8 page website</li>
                         <li>Mobile responsive</li>
                         <li>Contact + Messenger</li>
                         <li>Google SEO setup</li>
                         <li>Free hosting setup</li>
-                        <li>Social media links</li>
-                        <li>3-5 day delivery</li>
+                        <li>Social media integration</li>
+                        <li>Delivered in 3-5 days</li>
                     </ul>
                     <a href="#contact" class="btn btn-glow btn-price">Get Started</a>
                 </div>
@@ -399,16 +401,17 @@
                     <div class="pc-header">
                         <div class="pc-tier">Platform</div>
                         <div class="pc-price">&#8369;20K<span>+</span></div>
-                        <div class="pc-note">one-time</div>
+                        <div class="pc-note">one-time payment</div>
                     </div>
+                    <div class="pc-desc">Full custom platform with search, listings, admin panel — like CebuLandMarket.</div>
                     <ul class="pc-list">
                         <li>Custom web app</li>
                         <li>Search, filters, listings</li>
                         <li>Admin features</li>
-                        <li>PWA (installable)</li>
+                        <li>PWA (installable app)</li>
                         <li>Full SEO optimization</li>
                         <li>Priority support</li>
-                        <li>1-2 week delivery</li>
+                        <li>Delivered in 1-2 weeks</li>
                     </ul>
                     <a href="#contact" class="btn btn-price">Get a Quote</a>
                 </div>
@@ -420,64 +423,62 @@
         </div>
     </section>
 
-    <!-- WHY US -->
-    <section class="section section-dark">
+    <!-- WHY US — HORIZONTAL SCROLL-LIKE -->
+    <section class="section sec-full-dark">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// why us</div>
-                <h2>Why WebCraft PH</h2>
+                <div class="section-tag">// the difference</div>
+                <h2>Other Developers vs. <span class="gradient-text">WebCraft PH</span></h2>
             </div>
-            <div class="why-grid reveal">
-                <div class="why-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="why-num">01</div>
-                    <h3>No Templates</h3>
-                    <p>Every site is custom-coded from scratch. Your business gets a unique website.</p>
+            <div class="compare-grid reveal">
+                <div class="compare-col compare-them">
+                    <div class="compare-header">Others</div>
+                    <div class="compare-item bad">Use templates that look the same</div>
+                    <div class="compare-item bad">Take weeks or months</div>
+                    <div class="compare-item bad">Lock you into their platform</div>
+                    <div class="compare-item bad">Slow, bloated websites</div>
+                    <div class="compare-item bad">No SEO, no Google presence</div>
+                    <div class="compare-item bad">Disappear after launch</div>
                 </div>
-                <div class="why-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="why-num">02</div>
-                    <h3>Filipino-Owned</h3>
-                    <p>Based in the Philippines. We understand local businesses and internet speeds.</p>
-                </div>
-                <div class="why-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="why-num">03</div>
-                    <h3>Fast Delivery</h3>
-                    <p>Most sites delivered within 48 hours to 5 days. Not weeks. Not months.</p>
-                </div>
-                <div class="why-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="why-num">04</div>
-                    <h3>You Own Everything</h3>
-                    <p>Your code, your site, your domain. No lock-in. Take it anywhere.</p>
+                <div class="compare-vs">VS</div>
+                <div class="compare-col compare-us">
+                    <div class="compare-header glow-header">WebCraft PH</div>
+                    <div class="compare-item good">Custom-coded from scratch</div>
+                    <div class="compare-item good">Delivered in 48 hours to 5 days</div>
+                    <div class="compare-item good">You own everything</div>
+                    <div class="compare-item good">Lightning fast, even on 3G</div>
+                    <div class="compare-item good">Google SEO built-in</div>
+                    <div class="compare-item good">Ongoing support available</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section">
+    <section id="contact" class="section sec-full-dark contact-section">
         <div class="container">
             <div class="contact-wrapper reveal">
                 <div class="contact-left">
-                    <div class="section-tag">// contact</div>
-                    <h2>Let's Build<br>Your Website</h2>
-                    <p>Tell us about your business. We'll reply within 24 hours — no obligations.</p>
+                    <div class="section-tag">// let's go</div>
+                    <h2>Ready to Put Your Business Online?</h2>
+                    <p>Send us a message. No commitment. No fees until you're happy. We reply within 24 hours.</p>
                     <div class="contact-perks">
                         <div class="cp"><span class="cp-dot"></span> Free consultation</div>
-                        <div class="cp"><span class="cp-dot"></span> No commitment</div>
-                        <div class="cp"><span class="cp-dot"></span> Reply in 24 hours</div>
+                        <div class="cp"><span class="cp-dot"></span> No commitment required</div>
+                        <div class="cp"><span class="cp-dot"></span> Reply within 24 hours</div>
+                        <div class="cp"><span class="cp-dot"></span> Filipino-owned studio</div>
                     </div>
                     <div class="contact-code">
                         <code>
-                            <span class="cc-gray">// your business online</span><br>
-                            <span class="cc-purple">const</span> website = <span class="cc-green">WebCraft</span>.<span class="cc-blue">build</span>({<br>
+                            <span class="cc-gray">// your business online in days</span><br>
+                            <span class="cc-purple">const</span> site = <span class="cc-green">WebCraft</span>.<span class="cc-blue">build</span>({<br>
                             &nbsp;&nbsp;client: <span class="cc-orange">"Your Business"</span>,<br>
                             &nbsp;&nbsp;fast: <span class="cc-purple">true</span>,<br>
                             &nbsp;&nbsp;mobile: <span class="cc-purple">true</span>,<br>
-                            &nbsp;&nbsp;seo: <span class="cc-purple">true</span><br>
-                            });
+                            &nbsp;&nbsp;seo: <span class="cc-purple">true</span>,<br>
+                            &nbsp;&nbsp;custom: <span class="cc-purple">true</span><br>
+                            });<br>
+                            <span class="cc-gray">// => "yourname.com is live!"</span>
                         </code>
                     </div>
                 </div>

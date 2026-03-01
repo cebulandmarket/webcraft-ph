@@ -202,6 +202,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // ===== MAGNETIC BUTTONS =====
+    document.querySelectorAll('[data-magnetic]').forEach(function(btn) {
+        btn.addEventListener('mousemove', function(e) {
+            var rect = btn.getBoundingClientRect();
+            var x = e.clientX - rect.left - rect.width / 2;
+            var y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = 'translate(' + x * 0.2 + 'px, ' + y * 0.2 + 'px)';
+        });
+        btn.addEventListener('mouseleave', function() {
+            btn.style.transform = '';
+        });
+    });
+
+    // ===== RIPPLE ON ALL BUTTONS =====
+    document.querySelectorAll('.btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            var rect = btn.getBoundingClientRect();
+            var ripple = document.createElement('span');
+            ripple.className = 'ripple';
+            var size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+            btn.appendChild(ripple);
+            setTimeout(function() { ripple.remove(); }, 600);
+        });
+    });
+
+    // ===== SPOTLIGHT ON DARK SECTIONS =====
+    document.querySelectorAll('.has-grid-bg').forEach(function(sec) {
+        sec.addEventListener('mousemove', function(e) {
+            var rect = sec.getBoundingClientRect();
+            var x = e.clientX - rect.left;
+            var y = e.clientY - rect.top;
+            sec.style.setProperty('--spot-x', x + 'px');
+            sec.style.setProperty('--spot-y', y + 'px');
+        });
+    });
+
     // ===== CONTACT FORM =====
     var form = document.getElementById('contact-form');
     var status = document.getElementById('form-status');

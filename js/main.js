@@ -241,6 +241,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // ===== LOADING SCREEN =====
+    var loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(function() {
+            loader.classList.add('hidden');
+        }, 1800);
+    }
+
+    // ===== FAQ ACCORDION =====
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var item = btn.parentElement;
+            var isActive = item.classList.contains('active');
+            // Close all first
+            document.querySelectorAll('.faq-item').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            // Toggle clicked one
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // ===== PRICE CALCULATOR =====
+    var calcPages = document.getElementById('calcPages');
+    var calcPagesVal = document.getElementById('calcPagesVal');
+    var calcPrice = document.getElementById('calcPrice');
+    if (calcPages && calcPrice) {
+        function updateCalc() {
+            var pages = parseInt(calcPages.value);
+            calcPagesVal.textContent = pages;
+            // Base: P2,000 per page, min P5,000
+            var base = Math.max(pages * 2000, 5000);
+            // Add feature prices
+            document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(function(cb) {
+                if (cb.checked) {
+                    base += parseInt(cb.getAttribute('data-price')) || 0;
+                }
+            });
+            calcPrice.textContent = 'P' + base.toLocaleString();
+        }
+        calcPages.addEventListener('input', updateCalc);
+        document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(function(cb) {
+            cb.addEventListener('change', updateCalc);
+        });
+        updateCalc();
+    }
+
+    // ===== DARK/LIGHT THEME TOGGLE =====
+    var themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        // Check saved preference
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        });
+    }
+
     // ===== CONTACT FORM =====
     var form = document.getElementById('contact-form');
     var status = document.getElementById('form-status');

@@ -11,9 +11,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='72' font-family='Arial' font-size='65' font-weight='900' fill='white' text-anchor='middle'>W</text></svg>">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- LOADING SCREEN -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <div class="loader-cube">W</div>
+            <div class="loader-text">WebCraft PH</div>
+        </div>
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
 
     <!-- GLOBAL EFFECTS -->
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -36,6 +46,10 @@
                 <li><a href="#process">Process</a></li>
                 <li><a href="#contact" class="btn btn-nav">Get a Quote</a></li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="toggle-icon sun">&#9728;</span>
+                <span class="toggle-icon moon">&#9790;</span>
+            </button>
         </div>
     </nav>
 
@@ -110,8 +124,40 @@
         </div>
     </div>
 
+    <!-- CREDIBILITY BAR -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>DTI Registered</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <span>100% Custom Code</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>48hr Avg Delivery</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Based in Cebu, PH</span>
+                </div>
+                <div class="trust-divider"></div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span>2 Live Platforms</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- PROBLEM -->
-    <section class="section">
+    <section class="section sec-full-dark">
         <div class="container">
             <div class="problem-card reveal" data-parallax="0.03">
                 <div class="problem-glow"></div>
@@ -209,19 +255,8 @@
                                 cebulandmarket.com
                             </div>
                         </div>
-                        <div class="bm-body clm-body">
-                            <div class="mock-nav"></div>
-                            <div class="mock-hero-section">
-                                <div class="mock-h1"></div>
-                                <div class="mock-h1 short"></div>
-                                <div class="mock-p"></div>
-                                <div class="mock-btn-row"><div class="mock-btn"></div><div class="mock-btn ghost"></div></div>
-                            </div>
-                            <div class="mock-cards">
-                                <div class="mock-listing"><div class="mock-img"></div><div class="mock-info"><div class="mock-line"></div><div class="mock-line sm"></div></div></div>
-                                <div class="mock-listing"><div class="mock-img"></div><div class="mock-info"><div class="mock-line"></div><div class="mock-line sm"></div></div></div>
-                                <div class="mock-listing"><div class="mock-img"></div><div class="mock-info"><div class="mock-line"></div><div class="mock-line sm"></div></div></div>
-                            </div>
+                        <div class="bm-body-iframe">
+                            <iframe src="https://cebulandmarket.com" loading="lazy" title="CebuLandMarket Preview"></iframe>
                         </div>
                     </div>
                     <div class="floating-tag ft-1">PWA</div>
@@ -454,6 +489,83 @@
         </div>
     </section>
 
+    <!-- PRICE CALCULATOR -->
+    <section class="section sec-full-dark has-grid-bg">
+        <div class="grid-bg"></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="section-header reveal">
+                <div class="section-tag">// estimate</div>
+                <h2>Build Your Quote in <span class="gradient-text">10 Seconds</span></h2>
+                <p>Drag the sliders. See your price update live.</p>
+            </div>
+            <div class="calc-card reveal">
+                <div class="calc-sliders">
+                    <div class="calc-group">
+                        <label>Number of Pages</label>
+                        <input type="range" min="1" max="15" value="3" class="calc-range" id="calcPages">
+                        <div class="calc-range-labels"><span>1</span><span id="calcPagesVal">3</span><span>15</span></div>
+                    </div>
+                    <div class="calc-group">
+                        <label>Features</label>
+                        <div class="calc-checks">
+                            <label class="calc-check"><input type="checkbox" checked data-price="0" id="feat-mobile"><span>Mobile Responsive</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="2000" id="feat-seo"><span>Google SEO (+P2,000)</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="1500" id="feat-messenger"><span>Messenger + Forms (+P1,500)</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="3000" id="feat-pwa"><span>PWA / Installable (+P3,000)</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="1000" id="feat-domain"><span>Domain Setup (+P1,000)</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-result">
+                    <div class="calc-result-label">Estimated Price</div>
+                    <div class="calc-price" id="calcPrice">P5,000</div>
+                    <div class="calc-note">One-time payment. No subscriptions.</div>
+                    <a href="#contact" class="btn btn-glow" style="margin-top:1.5rem;">Get This Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section sec-full-dark">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-tag">// questions</div>
+                <h2>Got Questions? <span class="gradient-text">We Got Answers.</span></h2>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-q">How long does it take to build my website?<span class="faq-icon">+</span></button>
+                    <div class="faq-a"><p>Most websites are delivered in 24 hours to 5 days depending on the package. A simple starter site can be ready overnight. Complex platforms take 1-2 weeks.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I need to know coding?<span class="faq-icon">+</span></button>
+                    <div class="faq-a"><p>Not at all. You tell us what you want, we build it. If you need changes later, just message us. We handle everything technical.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What if I don't like the design?<span class="faq-icon">+</span></button>
+                    <div class="faq-a"><p>You get a preview link before going live. We revise until you're happy. We don't launch anything you haven't approved.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Do I really own the website?<span class="faq-icon">+</span></button>
+                    <div class="faq-a"><p>Yes. 100%. The code, the design, the domain — it's all yours. No lock-in. You can take it to another developer anytime. We don't hold your website hostage.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Is there a monthly fee?<span class="faq-icon">+</span></button>
+                    <div class="faq-a"><p>No. You pay once, it's yours forever. We offer optional monthly maintenance (P1,000/mo) if you want us to handle updates, but it's not required.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Can my website show up on Google?<span class="faq-icon">+</span></button>
+                    <div class="faq-a"><p>Yes. Our Business and Platform packages include full Google SEO setup. We register your site with Google Search Console and optimize every page so people can find you when they search.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What's a PWA? Do I need one?<span class="faq-icon">+</span></button>
+                    <div class="faq-a"><p>PWA stands for Progressive Web App. It means your website can be installed on phones like a real app — works offline, loads fast, sits on the home screen. It's perfect if your customers browse on mobile a lot.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT -->
     <section id="contact" class="section sec-full-dark contact-section">
         <div class="container">
@@ -514,6 +626,11 @@
             </div>
         </div>
     </section>
+
+    <!-- FLOATING CHAT BUTTON -->
+    <a href="#contact" class="float-chat" id="floatChat" title="Get a Quote">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </a>
 
     <!-- FOOTER -->
     <footer class="footer">

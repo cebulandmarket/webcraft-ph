@@ -103,8 +103,8 @@ body:hover .cursor-glow{opacity:1}
 .crm-btn:hover{background:#6d28d9;transform:translateY(-2px);box-shadow:0 0 25px rgba(124,58,237,0.4)}
 .bahaw-btn{background:#8B7355;color:var(--white);border-color:#8B7355;box-shadow:0 0 15px rgba(139,115,85,0.3)}
 .bahaw-btn:hover{background:#6d5a43;transform:translateY(-2px);box-shadow:0 0 25px rgba(139,115,85,0.4)}
-.ai-btn{background:#0891b2;color:var(--white);border-color:#0891b2;box-shadow:0 0 15px rgba(8,145,178,0.3);cursor:default}
-.ai-btn:hover{box-shadow:0 0 25px rgba(8,145,178,0.4)}
+.ai-btn{background:#0891b2;color:var(--white);border-color:#0891b2;box-shadow:0 0 15px rgba(8,145,178,0.3)}
+.ai-btn:hover{background:#0e7490;transform:translateY(-2px);box-shadow:0 0 25px rgba(8,145,178,0.4)}
 
 /* ========== NAV ========== */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.7rem 0;transition:all .4s}

@@ -312,23 +312,27 @@ document.addEventListener('DOMContentLoaded', function() {
             var btn = form.querySelector('button[type="submit"]');
             var originalHTML = btn.innerHTML;
             btn.disabled = true;
-            btn.innerHTML = '<span>Sending...</span>';
+            btn.innerHTML = '<span class="btn-spinner"></span><span>Sending...</span>';
+            status.className = '';
+            status.innerHTML = '';
 
             fetch(form.action, { method: 'POST', body: new FormData(form) })
             .then(function(r) { return r.json(); })
             .then(function(data) {
                 if (data.success) {
-                    status.textContent = 'Message sent! We\'ll reply within 24 hours.';
-                    status.className = 'form-success';
+                    status.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Message sent! We\'ll reply within 24 hours.';
+                    status.className = 'form-status-msg form-success';
                     form.reset();
+                    setTimeout(function() { status.classList.add('form-status-fade'); }, 5000);
+                    setTimeout(function() { status.className = ''; status.innerHTML = ''; }, 5800);
                 } else {
-                    status.textContent = 'Something went wrong. Please try again.';
-                    status.className = 'form-error';
+                    status.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Something went wrong. Please try again.';
+                    status.className = 'form-status-msg form-error';
                 }
             })
             .catch(function() {
-                status.textContent = 'Network error. Check your connection.';
-                status.className = 'form-error';
+                status.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Network error. Check your connection.';
+                status.className = 'form-status-msg form-error';
             })
             .finally(function() {
                 btn.disabled = false;

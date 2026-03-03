@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#111}
+.logo{width:500px;height:500px;background:linear-gradient(135deg,#ff3c00,#ff0080,#ff3c00);border-radius:80px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.logo::before{content:'';position:absolute;inset:8px;background:#0a0a0a;border-radius:72px}
+.inner{position:relative;z-index:1;text-align:center}
+.w{font-family:'Arial Black',sans-serif;font-size:220px;font-weight:900;color:transparent;background:linear-gradient(135deg,#ff3c00,#ff0080);-webkit-background-clip:text;background-clip:text;line-height:1}
+.text{font-family:'Arial Black',sans-serif;font-size:42px;font-weight:900;color:#fff;letter-spacing:8px;margin-top:-10px}
+</style>
+</head>
+<body>
+<div class="logo">
+    <div class="inner">
+        <div class="w">W</div>
+        <div class="text">CRAFT</div>
+    </div>
+</div>
+</body>
+</html>

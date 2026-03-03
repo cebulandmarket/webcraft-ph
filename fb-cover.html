@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#111}
+.cover{width:1640px;height:624px;background:#0a0a0a;position:relative;overflow:hidden;display:flex;align-items:center;padding:0 100px}
+.cover::before{content:'';position:absolute;top:-200px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,60,0,0.3),transparent 70%);border-radius:50%}
+.cover::after{content:'';position:absolute;bottom:-150px;left:200px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,0,128,0.2),transparent 70%);border-radius:50%}
+.content{position:relative;z-index:2;flex:1}
+.tagline{font-family:'Arial Black',sans-serif;font-size:72px;font-weight:900;color:#fff;line-height:1.1;max-width:800px}
+.tagline span{color:transparent;background:linear-gradient(135deg,#ff3c00,#ff0080);-webkit-background-clip:text;background-clip:text}
+.sub{font-family:Arial,sans-serif;font-size:24px;color:rgba(255,255,255,0.5);margin-top:20px;max-width:600px;line-height:1.5}
+.pills{display:flex;gap:12px;margin-top:30px}
+.pill{padding:10px 24px;border:2px solid rgba(255,60,0,0.4);border-radius:50px;font-family:'Arial Black',sans-serif;font-size:14px;color:#ff3c00;text-transform:uppercase;letter-spacing:2px}
+.right{position:relative;z-index:2;text-align:right}
+.price{font-family:'Arial Black',sans-serif;font-size:120px;font-weight:900;color:transparent;background:linear-gradient(135deg,#ff3c00,#ff0080);-webkit-background-clip:text;background-clip:text;line-height:1}
+.price-sub{font-family:Arial,sans-serif;font-size:22px;color:rgba(255,255,255,0.4);margin-top:5px}
+.url{font-family:'Courier New',monospace;font-size:20px;color:rgba(255,255,255,0.3);margin-top:20px;letter-spacing:2px}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,60,0,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,60,0,0.03) 1px,transparent 1px);background-size:60px 60px;z-index:1}
+</style>
+</head>
+<body>
+<div class="cover">
+    <div class="grid"></div>
+    <div class="content">
+        <div class="tagline">YOUR BUSINESS<br>NEEDS A <span>WEBSITE.</span><br>WE BUILD IT.</div>
+        <div class="sub">Custom-coded. Lightning fast. No templates. No subscriptions. You own everything.</div>
+        <div class="pills">
+            <div class="pill">48HR Delivery</div>
+            <div class="pill">Custom Code</div>
+            <div class="pill">Own It Forever</div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="price">P5K</div>
+        <div class="price-sub">starting price</div>
+        <div class="url">webcraftph.com</div>
+    </div>
+</div>
+</body>
+</html>

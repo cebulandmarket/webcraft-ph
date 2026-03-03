@@ -101,6 +101,8 @@ body:hover .cursor-glow{opacity:1}
 .clm-btn:hover{background:#0a6038;transform:translateY(-2px);box-shadow:0 0 25px rgba(14,124,74,0.4)}
 .crm-btn{background:#7c3aed;color:var(--white);border-color:#7c3aed;box-shadow:0 0 15px rgba(124,58,237,0.3)}
 .crm-btn:hover{background:#6d28d9;transform:translateY(-2px);box-shadow:0 0 25px rgba(124,58,237,0.4)}
+.bahaw-btn{background:#8B7355;color:var(--white);border-color:#8B7355;box-shadow:0 0 15px rgba(139,115,85,0.3)}
+.bahaw-btn:hover{background:#6d5a43;transform:translateY(-2px);box-shadow:0 0 25px rgba(139,115,85,0.4)}
 .ai-btn{background:#0891b2;color:var(--white);border-color:#0891b2;box-shadow:0 0 15px rgba(8,145,178,0.3);cursor:default}
 .ai-btn:hover{box-shadow:0 0 25px rgba(8,145,178,0.4)}
 
@@ -204,6 +206,7 @@ body:hover .cursor-glow{opacity:1}
 .showcase-glow{position:absolute;width:300px;height:300px;border-radius:50%;filter:blur(80px);opacity:.3;z-index:0}
 .clm-glow{background:#10b981;top:-50px;right:-50px}
 .crm-glow{background:#8b5cf6;top:-50px;left:-50px}
+.bahaw-glow{background:#8B7355;top:-50px;left:-50px}
 .ai-glow{background:#06b6d4;top:-50px;right:-50px}
 
 /* Browser mock */
@@ -253,6 +256,8 @@ body:hover .cursor-glow{opacity:1}
 .clm-pulse{background:#10b981;box-shadow:0 0 8px rgba(16,185,129,0.5)}
 .crm-badge{background:rgba(124,58,237,0.1);color:#7c3aed}
 .crm-pulse{background:#8b5cf6;box-shadow:0 0 8px rgba(139,92,246,0.5)}
+.bahaw-badge{background:rgba(139,115,85,0.1);color:#8B7355}
+.bahaw-pulse{background:#8B7355;box-shadow:0 0 8px rgba(139,115,85,0.5)}
 .ai-badge{background:rgba(8,145,178,0.1);color:#0891b2}
 .ai-pulse{background:#06b6d4;box-shadow:0 0 8px rgba(6,182,212,0.5)}
 .showcase-info h3{font-size:1.7rem;margin-bottom:.5rem}
@@ -262,6 +267,7 @@ body:hover .cursor-glow{opacity:1}
 .fl-icon{font-size:.7rem;font-weight:800;flex-shrink:0}
 .clm-icon{color:#0e7c4a}
 .crm-icon{color:#7c3aed}
+.bahaw-icon{color:#8B7355}
 .ai-icon{color:#0891b2}
 .tech-stack{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:1.25rem}
 .tech-stack span{font-family:var(--mono);font-size:.65rem;font-weight:600;padding:.25rem .65rem;border-radius:50px;background:rgba(99,102,241,0.06);color:var(--primary);border:1px solid rgba(99,102,241,0.1)}

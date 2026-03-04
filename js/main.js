@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(function(entry) {
             if (entry.isIntersecting && !counted) {
                 counted = true;
-                document.querySelectorAll('.stat-value').forEach(function(num) {
+                document.querySelectorAll('.stat-value[data-count]').forEach(function(num) {
                     var target = parseInt(num.getAttribute('data-count'));
                     var duration = 1800;
                     var startTime = null;

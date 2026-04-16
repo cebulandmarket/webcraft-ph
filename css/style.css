@@ -478,8 +478,9 @@ body.light-mode .p3-guarantee{background:#f9fafb;border-color:#e5e7eb}
 .mockup-info h3{font-size:1.3rem;margin-bottom:.4rem}
 .mockup-info p{color:var(--gray);font-size:.85rem;line-height:1.65;margin-bottom:1rem}
 .mockup-note{text-align:center;color:var(--gray);font-size:.9rem;margin-top:2rem;font-style:italic}
+.mockup-full{grid-column:1 / -1}
 body.light-mode .mockup-card{background:#fff;border-color:#e5e7eb}
-@media(max-width:768px){.mockup-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.mockup-grid{grid-template-columns:1fr}.mockup-full{grid-column:auto}}
 
 /* ========== ABOUT PAGE — PROSE STYLE ========== */
 .about-prose{max-width:720px;margin:0 auto}

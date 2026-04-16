@@ -481,46 +481,35 @@ body.light-mode .p3-guarantee{background:#f9fafb;border-color:#e5e7eb}
 body.light-mode .mockup-card{background:#fff;border-color:#e5e7eb}
 @media(max-width:768px){.mockup-grid{grid-template-columns:1fr}}
 
-/* ========== ABOUT PAGE — MISSION ========== */
-.mission-block{text-align:center;max-width:700px;margin:0 auto}
-.mission-text{font-size:1.1rem;color:var(--gray);line-height:1.8;margin-top:1rem}
+/* ========== ABOUT PAGE — PROSE STYLE ========== */
+.about-prose{max-width:720px;margin:0 auto}
+.about-prose h2{font-size:clamp(1.4rem,3vw,2rem);line-height:1.4;margin-bottom:1.5rem}
+.about-prose h2 em{font-style:italic;color:var(--primary-light)}
+.about-prose p{color:var(--gray);font-size:1rem;line-height:1.85;margin-bottom:1.25rem}
+.about-prose p:last-child{margin-bottom:0}
+.about-prose .section-tag{margin-bottom:1rem}
 
-/* ========== ABOUT PAGE — VALUES ========== */
-.values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:800px;margin:0 auto}
-.value-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;transition:all .3s}
-.value-card:hover{border-color:rgba(99,102,241,0.2);transform:translateY(-3px)}
-.value-emoji{font-size:2rem;margin-bottom:.75rem}
-.value-card h3{margin-bottom:.4rem}
-.value-card p{color:var(--gray);font-size:.85rem;line-height:1.65}
+.prose-emphasis{margin:2rem 0;padding-left:1.5rem;border-left:3px solid var(--primary)}
+.prose-emphasis p{font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:.6rem;line-height:1.6}
+.prose-emphasis p:last-child{margin-bottom:0}
 
-/* ========== ABOUT PAGE — STORY ========== */
-.story-block{max-width:780px;margin:0 auto}
-.story-block h2{margin-bottom:2rem}
-.story-content{display:grid;grid-template-columns:200px 1fr;gap:2.5rem;align-items:start;background:rgba(10,10,26,0.7);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius);padding:2.5rem}
-.story-author{text-align:center;position:sticky;top:6rem}
-.story-text p{color:var(--gray-light);font-size:.92rem;line-height:1.8;margin-bottom:1rem}
-.story-text p:last-child{margin-bottom:0}
-.story-text p strong{color:var(--white)}
+.prose-highlight{font-size:1.15rem;font-weight:700;color:var(--white);margin:1.5rem 0}
 
-/* ========== ABOUT PAGE — BELIEFS ========== */
-.beliefs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:900px;margin:0 auto}
-.belief-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;text-align:center;transition:all .3s}
-.belief-card:hover{border-color:rgba(99,102,241,0.2);transform:translateY(-3px)}
-.belief-emoji{font-size:2rem;margin-bottom:.75rem}
-.belief-card h3{margin-bottom:.4rem}
-.belief-card p{color:var(--gray);font-size:.85rem;line-height:1.65}
+.prose-list{margin:1.5rem 0;display:flex;flex-direction:column;gap:.6rem}
+.prose-list p{margin:0;padding-left:1.25rem;position:relative;color:var(--gray-light);font-size:.95rem}
+.prose-list p::before{content:'';position:absolute;left:0;top:.65em;width:6px;height:6px;border-radius:50%;background:var(--primary-light)}
 
-/* Light mode about page */
-body.light-mode .value-card,body.light-mode .belief-card{background:#ffffff;border-color:#e5e7eb}
-body.light-mode .story-content{background:rgba(255,255,255,0.9);border-color:#e5e7eb}
-body.light-mode .story-text p{color:#4b5563}
+/* Photo section prose overrides */
+.photo-section .about-prose h2{color:#ffffff}
+.photo-section .about-prose p{color:#d1d5db}
+.photo-section .prose-emphasis p{color:#ffffff}
+.photo-section .prose-list p{color:#d1d5db}
 
-@media(max-width:768px){
-    .values-grid{grid-template-columns:1fr}
-    .beliefs-grid{grid-template-columns:1fr}
-    .story-content{grid-template-columns:1fr;text-align:center}
-    .story-author{position:static}
-}
+/* Light mode prose */
+body.light-mode .about-prose h2{color:#111827}
+body.light-mode .about-prose p{color:#4b5563}
+body.light-mode .prose-emphasis p{color:#111827}
+body.light-mode .prose-highlight{color:#111827}
 
 /* ========== MOBILE ========== */
 @media(max-width:900px){

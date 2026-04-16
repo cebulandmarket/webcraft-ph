@@ -44,11 +44,6 @@ a{color:var(--primary-light);text-decoration:none}
 @keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 
 /* Hero entrance sequence */
-.hero-badge{opacity:0;animation:heroFade .8s ease .2s forwards}
-.hero h1{opacity:0;animation:heroSlide .8s ease .4s forwards}
-.hero-sub{opacity:0;animation:heroFade .8s ease .6s forwards}
-.hero-buttons{opacity:0;animation:heroSlide .8s ease .8s forwards}
-.hero-stats{opacity:0;animation:heroFade .8s ease 1s forwards}
 @keyframes heroFade{from{opacity:0}to{opacity:1}}
 @keyframes heroSlide{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
@@ -135,23 +130,33 @@ a{color:var(--primary-light);text-decoration:none}
 .menu-toggle span{display:block;width:100%;height:2px;background:var(--white);border-radius:2px;transition:.3s}
 
 /* ========== HERO ========== */
-.hero{min-height:100vh;display:flex;align-items:center;background:#0a0a1a url('../images/hero-bg.jpg') center/cover no-repeat;padding:7rem 0 5rem;position:relative}
-.hero::before{content:'';position:absolute;inset:0;background:rgba(6,6,20,0.82);z-index:0}
-.hero-inner{position:relative;z-index:1;max-width:750px;margin:0 auto;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:600;color:var(--primary-light);text-transform:uppercase;letter-spacing:.08em;padding:.4rem 1rem;border:1px solid rgba(99,102,241,0.2);border-radius:50px;background:rgba(99,102,241,0.06);margin-bottom:2rem}
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(160deg,#06061a 0%,#0c0c2a 30%,#110f30 60%,#0a0a1a 100%);padding:7rem 0 5rem;position:relative;overflow:hidden}
+.hero-split{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-content{max-width:520px}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;color:var(--primary-light);text-transform:uppercase;letter-spacing:.08em;padding:.4rem 1rem;border:1px solid rgba(99,102,241,0.2);border-radius:50px;background:rgba(99,102,241,0.06);margin-bottom:1.5rem;opacity:0;animation:heroFade .8s ease .2s forwards}
 .badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:dotPulse 2s infinite}
 @keyframes dotPulse{0%,100%{opacity:1}50%{opacity:.4}}
-.typewriter-wrap{white-space:nowrap}
-.typewriter{display:inline;color:var(--white);font-weight:700;border-bottom:2px solid var(--primary-light)}
-.cursor-blink{color:var(--primary-light);animation:blink 1s step-end infinite;font-weight:300}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-.hero-sub{font-size:1.05rem;color:var(--gray);margin:1.5rem auto 2.5rem;max-width:540px;line-height:1.7}
-.hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:4rem;max-width:580px;margin-left:auto;margin-right:auto}
-.stat-card{background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--radius-sm);padding:.9rem .5rem;text-align:center;transition:border-color .3s}
-.stat-card:hover{border-color:rgba(99,102,241,0.25)}
-.stat-value{font-size:1.6rem;font-weight:800;color:var(--white);font-family:var(--mono)}
-.stat-label{font-size:.65rem;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;margin-top:.15rem}
+.hero h1{font-size:clamp(2rem,4.5vw,3.2rem);opacity:0;animation:heroSlide .8s ease .4s forwards}
+.hero-sub{font-size:1rem;color:var(--gray);margin:1.25rem 0 2rem;line-height:1.75;opacity:0;animation:heroFade .8s ease .6s forwards}
+.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;opacity:0;animation:heroSlide .8s ease .8s forwards}
+
+/* Hero previews */
+.hero-previews{position:relative;height:480px;opacity:0;animation:heroScale 1s ease .6s forwards}
+@keyframes heroScale{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(99,102,241,0.12) 0%,rgba(34,211,238,0.04) 40%,transparent 70%);pointer-events:none;z-index:0}
+.preview-main,.preview-back{position:absolute;border-radius:16px;box-shadow:0 24px 64px rgba(0,0,0,0.4);transition:transform .5s ease,box-shadow .5s ease}
+.preview-main{width:85%;top:50%;left:50%;transform:translate(-50%,-50%);z-index:3}
+.preview-main:hover{transform:translate(-50%,-50%) translateY(-8px);box-shadow:0 32px 80px rgba(0,0,0,0.5)}
+.preview-back{width:60%;z-index:1;opacity:.7;filter:blur(1px);transition:opacity .5s,filter .5s,transform .5s}
+.preview-left{top:8%;left:-8%;transform:rotate(-4deg);animation:previewFloat 6s ease-in-out infinite}
+.preview-right{bottom:5%;right:-5%;transform:rotate(3deg);animation:previewFloat 6s ease-in-out infinite reverse}
+.hero-previews:hover .preview-back{opacity:.85;filter:blur(0px)}
+@keyframes previewFloat{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-10px)}}
+.preview-main img,.preview-back img{width:100%}
+img.preview-main,img.preview-back{object-fit:cover}
+
+/* Light mode hero */
+body.light-mode .hero{background:linear-gradient(160deg,#0f0f2e 0%,#1a1a45 40%,#15153d 70%,#0f0f2e 100%)}
 
 /* ========== SECTIONS ========== */
 .section{padding:6rem 0;position:relative}
@@ -606,8 +611,11 @@ body.light-mode .prose-highlight{color:#111827}
     .contact-left{text-align:center}
     .contact-left h2{text-align:center}
     .contact-perks{align-items:center}
-    .hero{min-height:auto;padding:7rem 0 4rem}
-    .hero-stats{grid-template-columns:repeat(2,1fr)}
+    .hero{min-height:auto;padding:7rem 0 3rem}
+    .hero-split{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+    .hero-content{max-width:100%}
+    .hero-buttons{justify-content:center}
+    .hero-previews{height:320px}
     .section{padding:4rem 0}
     .footer-grid{grid-template-columns:1fr;gap:1.5rem;text-align:center}
     .footer-brand p{max-width:100%;margin-left:auto;margin-right:auto}
@@ -623,7 +631,9 @@ body.light-mode .prose-highlight{color:#111827}
 }
 @media(max-width:480px){
     .hero-buttons{flex-direction:column;align-items:stretch}
-    .hero-stats{grid-template-columns:1fr 1fr}
+    .hero-previews{height:260px}
+    .preview-left{left:-5%;top:10%}
+    .preview-right{right:-3%;bottom:8%}
     .trusted-logos{gap:.75rem}
     .trusted-logo span{font-size:.72rem}
     .results-grid{grid-template-columns:1fr}

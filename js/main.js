@@ -1,72 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // ===== PARTICLE CANVAS =====
-    var canvas = document.getElementById('particleCanvas');
-    if (canvas) {
-        var ctx = canvas.getContext('2d');
-        var particles = [];
-        var mouse = { x: 0, y: 0 };
-
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        resize();
-        window.addEventListener('resize', resize);
-
-        function Particle() {
-            this.x = Math.random() * canvas.width;
-            this.y = Math.random() * canvas.height;
-            this.vx = (Math.random() - 0.5) * 0.3;
-            this.vy = (Math.random() - 0.5) * 0.3;
-            this.size = Math.random() * 1.5 + 0.5;
-            this.opacity = Math.random() * 0.4 + 0.1;
-        }
-
-        for (var i = 0; i < 80; i++) particles.push(new Particle());
-
-        function animateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(function(p, idx) {
-                p.x += p.vx;
-                p.y += p.vy;
-                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = 'rgba(99, 102, 241, ' + p.opacity + ')';
-                ctx.fill();
-
-                // Connect nearby particles
-                for (var j = idx + 1; j < particles.length; j++) {
-                    var dx = p.x - particles[j].x;
-                    var dy = p.y - particles[j].y;
-                    var dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 120) {
-                        ctx.beginPath();
-                        ctx.moveTo(p.x, p.y);
-                        ctx.lineTo(particles[j].x, particles[j].y);
-                        ctx.strokeStyle = 'rgba(99, 102, 241, ' + (0.06 * (1 - dist / 120)) + ')';
-                        ctx.lineWidth = 0.5;
-                        ctx.stroke();
-                    }
-                }
-            });
-            requestAnimationFrame(animateParticles);
-        }
-        animateParticles();
-    }
-
-    // ===== CURSOR GLOW =====
-    var glow = document.getElementById('cursorGlow');
-    if (glow && window.innerWidth > 768) {
-        document.addEventListener('mousemove', function(e) {
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-        });
-    }
-
     // ===== TYPEWRITER =====
     var tw = document.getElementById('typewriter');
     if (tw) {
@@ -94,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             setTimeout(function() { requestAnimationFrame(type); }, deleting ? 30 : 60);
         }
-        setTimeout(type, 800);
+        setTimeout(type, 500);
     }
 
     // ===== SCROLL REVEAL =====
@@ -116,12 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 counted = true;
                 document.querySelectorAll('.stat-value[data-count]').forEach(function(num) {
                     var target = parseInt(num.getAttribute('data-count'));
-                    var duration = 1800;
+                    var duration = 1500;
                     var startTime = null;
                     function animate(time) {
                         if (!startTime) startTime = time;
                         var progress = Math.min((time - startTime) / duration, 1);
-                        var eased = 1 - Math.pow(1 - progress, 4);
+                        var eased = 1 - Math.pow(1 - progress, 3);
                         num.textContent = Math.floor(eased * target);
                         if (progress < 1) requestAnimationFrame(animate);
                         else num.textContent = target;
@@ -134,27 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var statsSection = document.querySelector('.hero-stats');
     if (statsSection) counterObserver.observe(statsSection);
-
-    // ===== TILT CARDS =====
-    document.querySelectorAll('.tilt-card').forEach(function(card) {
-        card.addEventListener('mousemove', function(e) {
-            var rect = card.getBoundingClientRect();
-            var x = e.clientX - rect.left;
-            var y = e.clientY - rect.top;
-            var centerX = rect.width / 2;
-            var centerY = rect.height / 2;
-            var rotateX = (y - centerY) / centerY * -4;
-            var rotateY = (x - centerX) / centerX * 4;
-
-            card.style.transform = 'perspective(600px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-4px)';
-            card.style.setProperty('--mouse-x', x + 'px');
-            card.style.setProperty('--mouse-y', y + 'px');
-        });
-
-        card.addEventListener('mouseleave', function() {
-            card.style.transform = '';
-        });
-    });
 
     // ===== NAV SCROLL =====
     var nav = document.getElementById('nav');
@@ -189,76 +101,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== PARALLAX =====
-    window.addEventListener('scroll', function() {
-        var scrolled = window.pageYOffset;
-        document.querySelectorAll('[data-parallax]').forEach(function(el) {
-            var speed = parseFloat(el.getAttribute('data-parallax'));
-            var rect = el.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                var offset = (rect.top - window.innerHeight / 2) * speed;
-                el.style.transform = 'translateY(' + offset + 'px)';
-            }
-        });
-    });
-
-    // ===== MAGNETIC BUTTONS =====
-    document.querySelectorAll('[data-magnetic]').forEach(function(btn) {
-        btn.addEventListener('mousemove', function(e) {
-            var rect = btn.getBoundingClientRect();
-            var x = e.clientX - rect.left - rect.width / 2;
-            var y = e.clientY - rect.top - rect.height / 2;
-            btn.style.transform = 'translate(' + x * 0.2 + 'px, ' + y * 0.2 + 'px)';
-        });
-        btn.addEventListener('mouseleave', function() {
-            btn.style.transform = '';
-        });
-    });
-
-    // ===== RIPPLE ON ALL BUTTONS =====
-    document.querySelectorAll('.btn').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-            var rect = btn.getBoundingClientRect();
-            var ripple = document.createElement('span');
-            ripple.className = 'ripple';
-            var size = Math.max(rect.width, rect.height);
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
-            ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
-            btn.appendChild(ripple);
-            setTimeout(function() { ripple.remove(); }, 600);
-        });
-    });
-
-    // ===== SPOTLIGHT ON DARK SECTIONS =====
-    document.querySelectorAll('.has-grid-bg').forEach(function(sec) {
-        sec.addEventListener('mousemove', function(e) {
-            var rect = sec.getBoundingClientRect();
-            var x = e.clientX - rect.left;
-            var y = e.clientY - rect.top;
-            sec.style.setProperty('--spot-x', x + 'px');
-            sec.style.setProperty('--spot-y', y + 'px');
-        });
-    });
-
-    // ===== LOADING SCREEN =====
-    var loader = document.getElementById('loader');
-    if (loader) {
-        setTimeout(function() {
-            loader.classList.add('hidden');
-        }, 1800);
-    }
-
     // ===== FAQ ACCORDION =====
     document.querySelectorAll('.faq-q').forEach(function(btn) {
         btn.addEventListener('click', function() {
             var item = btn.parentElement;
             var isActive = item.classList.contains('active');
-            // Close all first
             document.querySelectorAll('.faq-item').forEach(function(el) {
                 el.classList.remove('active');
             });
-            // Toggle clicked one
             if (!isActive) {
                 item.classList.add('active');
             }
@@ -273,9 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
         function updateCalc() {
             var pages = parseInt(calcPages.value);
             calcPagesVal.textContent = pages;
-            // Base: P2,000 per page, min P5,000
             var base = Math.max(pages * 2000, 5000);
-            // Add feature prices
             document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(function(cb) {
                 if (cb.checked) {
                     base += parseInt(cb.getAttribute('data-price')) || 0;
@@ -293,7 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== DARK/LIGHT THEME TOGGLE =====
     var themeToggle = document.getElementById('themeToggle');
     if (themeToggle) {
-        // Check saved preference
         if (localStorage.getItem('theme') === 'light') {
             document.body.classList.add('light-mode');
         }

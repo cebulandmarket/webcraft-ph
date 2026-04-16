@@ -22,19 +22,6 @@
 </head>
 <body>
 
-    <!-- LOADING SCREEN -->
-    <div class="loader" id="loader">
-        <div class="loader-logo">
-            <div class="loader-cube">W</div>
-            <div class="loader-text">WebCraft PH</div>
-        </div>
-        <div class="loader-bar"><div class="loader-fill"></div></div>
-    </div>
-
-    <!-- GLOBAL EFFECTS -->
-    <div class="cursor-glow" id="cursorGlow"></div>
-    <div class="noise-overlay"></div>
-
     <!-- NAV -->
     <nav class="nav" id="nav">
         <div class="container nav-inner">
@@ -49,7 +36,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#process">Process</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact" class="btn btn-nav">Get a Quote</a></li>
             </ul>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -61,111 +48,119 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
-        <canvas id="particleCanvas"></canvas>
-        <div class="hero-mesh"></div>
-        <div class="container hero-inner">
-            <div class="hero-badge anim-pop">
+        <div class="hero-inner container">
+            <div class="hero-badge">
                 <span class="badge-dot"></span>
                 Available for Projects
             </div>
-            <h1 class="anim-slide-up">
+            <h1>
                 We Build Websites That<br>
                 <span class="typewriter" id="typewriter"></span>
                 <span class="cursor-blink">|</span>
             </h1>
-            <p class="hero-sub anim-slide-up d2">Custom-coded, lightning-fast, mobile-first websites for Philippine businesses. No templates. No bloat. Just results that convert.</p>
-            <div class="hero-buttons anim-slide-up d3">
-                <a href="#contact" class="btn btn-glow btn-lg magnetic" data-magnetic>
+            <p class="hero-sub">Custom-coded, lightning-fast, mobile-first websites for Philippine businesses. No templates. No bloat. Just results that convert.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary btn-lg">
                     <span>Get a Free Quote</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
-                <a href="#portfolio" class="btn btn-glass btn-lg">See Our Work</a>
+                <a href="#portfolio" class="btn btn-outline btn-lg">See Our Work</a>
             </div>
-        </div>
-    </section>
-
-    <!-- MARQUEE -->
-    <div class="marquee-bar">
-        <div class="marquee-track">
-            <span>WEBSITES</span><span class="marquee-dot"></span>
-            <span>WEB APPS</span><span class="marquee-dot"></span>
-            <span>PWA</span><span class="marquee-dot"></span>
-            <span>SEO</span><span class="marquee-dot"></span>
-            <span>MOBILE-FIRST</span><span class="marquee-dot"></span>
-            <span>FAST DELIVERY</span><span class="marquee-dot"></span>
-            <span>CUSTOM CODE</span><span class="marquee-dot"></span>
-            <span>FILIPINO-OWNED</span><span class="marquee-dot"></span>
-            <span>WEBSITES</span><span class="marquee-dot"></span>
-            <span>WEB APPS</span><span class="marquee-dot"></span>
-            <span>PWA</span><span class="marquee-dot"></span>
-            <span>SEO</span><span class="marquee-dot"></span>
-            <span>MOBILE-FIRST</span><span class="marquee-dot"></span>
-            <span>FAST DELIVERY</span><span class="marquee-dot"></span>
-            <span>CUSTOM CODE</span><span class="marquee-dot"></span>
-            <span>FILIPINO-OWNED</span><span class="marquee-dot"></span>
-        </div>
-    </div>
-
-    <!-- CREDIBILITY BAR -->
-    <!-- PROBLEM -->
-    <section class="section sec-full-dark">
-        <div class="container">
-            <div class="problem-card reveal" data-parallax="0.03">
-                <div class="problem-glow"></div>
-                <div class="problem-inner">
-                    <div class="code-tag">&lt;problem&gt;</div>
-                    <h2>Most Small Businesses in the Philippines Still Don't Have a Website</h2>
-                    <p>Your competitors have one. Your customers are searching online right now. A professional website isn't a luxury — it's how people find you, trust you, and choose you.</p>
-                    <div class="code-tag">&lt;/problem&gt;</div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value" data-count="6">0</div>
+                    <div class="stat-label">Live Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-count="100">0</div>
+                    <div class="stat-label">% Custom Code</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-count="48">0</div>
+                    <div class="stat-label">Hour Delivery</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" data-count="0">0</div>
+                    <div class="stat-label">Monthly Fees</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SERVICES — BENTO GRID -->
-    <section id="services" class="section sec-full-dark has-grid-bg">
-        <div class="grid-bg"></div>
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-        <div class="container" style="position:relative;z-index:2;">
+    <!-- TRUSTED BY -->
+    <section class="trusted-section">
+        <div class="container">
+            <p class="trusted-label reveal">Platforms We've Built & Launched</p>
+            <div class="trusted-logos reveal">
+                <a href="https://cebulandmarket.com" target="_blank" rel="noopener" class="trusted-logo">
+                    <div class="tl-icon" style="background:linear-gradient(135deg,#0e7c4a,#10b981)">C</div>
+                    <span>CebuLandMarket</span>
+                </a>
+                <a href="https://ceburentmarket.com" target="_blank" rel="noopener" class="trusted-logo">
+                    <div class="tl-icon" style="background:linear-gradient(135deg,#7c3aed,#a78bfa)">R</div>
+                    <span>CebuRentMarket</span>
+                </a>
+                <a href="https://bahaw-studio.github.io" target="_blank" rel="noopener" class="trusted-logo">
+                    <div class="tl-icon" style="background:linear-gradient(135deg,#8B7355,#a0896b)">B</div>
+                    <span>BAHAW Studio</span>
+                </a>
+                <a href="https://cebulandmarket.github.io/cebuai-services/" target="_blank" rel="noopener" class="trusted-logo">
+                    <div class="tl-icon" style="background:linear-gradient(135deg,#0891b2,#22d3ee)">A</div>
+                    <span>CebuAI Services</span>
+                </a>
+                <a href="https://mytalentmydream.github.io/" target="_blank" rel="noopener" class="trusted-logo">
+                    <div class="tl-icon" style="background:linear-gradient(135deg,#d97706,#f59e0b)">M</div>
+                    <span>MyTalent.MyDream</span>
+                </a>
+                <a href="https://cebulandmarket.github.io/skillbloom/" target="_blank" rel="noopener" class="trusted-logo">
+                    <div class="tl-icon" style="background:linear-gradient(135deg,#16a34a,#22c55e)">S</div>
+                    <span>SkillBloom</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section">
+        <div class="container">
+            <div class="problem-card reveal">
+                <h2>Most Small Businesses in the Philippines Still Don't Have a Website</h2>
+                <p>Your competitors have one. Your customers are searching online right now. A professional website isn't a luxury — it's how people find you, trust you, and choose you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+        <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// what we do</div>
-                <h2>Your Competitors Already Have a Website.<br><span class="glitch-text" data-text="Do You?">Do You?</span></h2>
+                <p class="section-tag">What We Do</p>
+                <h2>Your Competitors Already Have a Website.<br>Do You?</h2>
             </div>
             <div class="bento reveal">
-                <div class="bento-card bento-wide tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="bento-glow bg-cyan"></div>
-                    <div class="bento-big-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                <div class="bento-card bento-wide">
+                    <div class="bento-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
                     <h3>Custom-Built Websites</h3>
                     <p>No Wix. No WordPress themes. We hand-code every pixel from scratch so your business looks like no one else's. Clean, fast, professional — built to convert visitors into customers.</p>
                 </div>
-                <div class="bento-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="bento-glow bg-purple"></div>
+                <div class="bento-card">
                     <div class="bento-emoji">&#9889;</div>
                     <h3>Loads in Under 2 Seconds</h3>
                     <p>Even on slow Philippine mobile data. Your competitors' sites are still loading while yours is already converting.</p>
                 </div>
-                <div class="bento-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="bento-glow bg-green"></div>
+                <div class="bento-card">
                     <div class="bento-emoji">&#128241;</div>
                     <h3>Mobile-First. Always.</h3>
                     <p>80% of your customers are on phones. We design for mobile first — desktop is the bonus, not the priority.</p>
                 </div>
-                <div class="bento-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="bento-glow bg-orange"></div>
+                <div class="bento-card">
                     <div class="bento-emoji">&#128270;</div>
                     <h3>Show Up on Google</h3>
                     <p>SEO baked in from day one. Google Search Console setup included. People find you, not your competitor.</p>
                 </div>
-                <div class="bento-card bento-wide tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="bento-glow bg-pink"></div>
+                <div class="bento-card bento-wide">
                     <div class="bento-feature-row">
                         <div>
                             <div class="bento-emoji">&#128172;</div>
@@ -184,20 +179,17 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1440,40 L1440,60 L0,60 Z" fill="#0c0c1d"/></svg>
-    <section id="portfolio" class="section sec-full-dark portfolio-section">
-        <div class="orb orb-3"></div>
-        <div class="container" style="position:relative;z-index:2;">
+    <section id="portfolio" class="section section-alt">
+        <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// shipped & live</div>
-                <h2>We Don't Just Talk.<br><span class="gradient-text">We Ship.</span></h2>
+                <p class="section-tag">Our Work</p>
+                <h2>We Don't Just Talk. We Ship.</h2>
                 <p>Real platforms. Real traffic. Real businesses running on our code.</p>
             </div>
 
             <!-- CLM SHOWCASE -->
-            <div class="showcase reveal" data-parallax="0.02">
+            <div class="showcase reveal">
                 <div class="showcase-visual">
-                    <div class="showcase-glow clm-glow"></div>
                     <div class="browser-mock">
                         <div class="bm-bar">
                             <div class="bm-dots"><i></i><i></i><i></i></div>
@@ -210,39 +202,35 @@
                             <iframe src="https://cebulandmarket.com" loading="lazy" title="CebuLandMarket Preview"></iframe>
                         </div>
                     </div>
-                    <div class="floating-tag ft-1">PWA</div>
-                    <div class="floating-tag ft-2">SEO</div>
-                    <div class="floating-tag ft-3">16+ Listings</div>
                 </div>
                 <div class="showcase-info">
-                    <div class="showcase-badge clm-badge">
-                        <span class="badge-pulse clm-pulse"></span>
+                    <div class="showcase-badge badge-green">
+                        <span class="badge-pulse pulse-green"></span>
                         Live
                     </div>
                     <h3>CebuLandMarket</h3>
                     <p>The first dedicated property listing platform for Cebu. Verified land, lots, and properties for sale — trusted by sellers across the province.</p>
                     <div class="feature-list">
-                        <div class="fl"><span class="fl-icon clm-icon">&#10003;</span> Property search & filtering</div>
-                        <div class="fl"><span class="fl-icon clm-icon">&#10003;</span> Installable PWA (works offline)</div>
-                        <div class="fl"><span class="fl-icon clm-icon">&#10003;</span> Contact forms + Messenger</div>
-                        <div class="fl"><span class="fl-icon clm-icon">&#10003;</span> Google SEO optimized</div>
-                        <div class="fl"><span class="fl-icon clm-icon">&#10003;</span> DTI-registered business</div>
-                        <div class="fl"><span class="fl-icon clm-icon">&#10003;</span> 16+ verified listings</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Property search & filtering</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Installable PWA (works offline)</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Contact forms + Messenger</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Google SEO optimized</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> DTI-registered business</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> 16+ verified listings</div>
                     </div>
                     <div class="tech-stack">
                         <span>HTML/CSS/JS</span><span>GitHub Pages</span><span>PWA</span><span>Web3Forms</span>
                     </div>
-                    <a href="https://cebulandmarket.com" target="_blank" rel="noopener" class="btn btn-showcase clm-btn">
+                    <a href="https://cebulandmarket.com" target="_blank" rel="noopener" class="btn btn-sm btn-green">
                         Visit CebuLandMarket
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </a>
                 </div>
             </div>
 
             <!-- CRM SHOWCASE -->
-            <div class="showcase showcase-flip reveal" data-parallax="0.02">
+            <div class="showcase showcase-flip reveal">
                 <div class="showcase-visual">
-                    <div class="showcase-glow crm-glow"></div>
                     <div class="browser-mock">
                         <div class="bm-bar">
                             <div class="bm-dots"><i></i><i></i><i></i></div>
@@ -266,39 +254,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="floating-tag ft-1 purple">Rentals</div>
-                    <div class="floating-tag ft-2 purple">Mobile</div>
-                    <div class="floating-tag ft-3 purple">Expat-Ready</div>
                 </div>
                 <div class="showcase-info">
-                    <div class="showcase-badge crm-badge">
-                        <span class="badge-pulse crm-pulse"></span>
+                    <div class="showcase-badge badge-purple">
+                        <span class="badge-pulse pulse-purple"></span>
                         Live
                     </div>
                     <h3>CebuRentMarket</h3>
                     <p>Cebu's rental listing platform for condos, apartments, rooms, and houses. Built for the growing expat and digital nomad market.</p>
                     <div class="feature-list">
-                        <div class="fl"><span class="fl-icon crm-icon">&#10003;</span> Search by location & price</div>
-                        <div class="fl"><span class="fl-icon crm-icon">&#10003;</span> Mobile-first responsive</div>
-                        <div class="fl"><span class="fl-icon crm-icon">&#10003;</span> Landlord inquiry system</div>
-                        <div class="fl"><span class="fl-icon crm-icon">&#10003;</span> Google SEO optimized</div>
-                        <div class="fl"><span class="fl-icon crm-icon">&#10003;</span> Fast on mobile data</div>
-                        <div class="fl"><span class="fl-icon crm-icon">&#10003;</span> Expat & nomad market</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Search by location & price</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Mobile-first responsive</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Landlord inquiry system</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Google SEO optimized</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Fast on mobile data</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Expat & nomad market</div>
                     </div>
                     <div class="tech-stack">
                         <span>Squarespace</span><span>Custom CSS</span><span>SEO</span><span>Responsive</span>
                     </div>
-                    <a href="https://ceburentmarket.com" target="_blank" rel="noopener" class="btn btn-showcase crm-btn">
+                    <a href="https://ceburentmarket.com" target="_blank" rel="noopener" class="btn btn-sm btn-purple">
                         Visit CebuRentMarket
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </a>
                 </div>
             </div>
 
             <!-- BAHAW STUDIO SHOWCASE -->
-            <div class="showcase reveal" data-parallax="0.02">
+            <div class="showcase reveal">
                 <div class="showcase-visual">
-                    <div class="showcase-glow bahaw-glow"></div>
                     <div class="browser-mock">
                         <div class="bm-bar">
                             <div class="bm-dots"><i></i><i></i><i></i></div>
@@ -311,39 +295,35 @@
                             <iframe src="https://bahaw-studio.github.io" loading="lazy" title="BAHAW Studio Preview"></iframe>
                         </div>
                     </div>
-                    <div class="floating-tag ft-1" style="background:rgba(139,115,85,0.15);color:#8B7355;border-color:rgba(139,115,85,0.3)">Streetwear</div>
-                    <div class="floating-tag ft-2" style="background:rgba(139,115,85,0.15);color:#8B7355;border-color:rgba(139,115,85,0.3)">Etsy</div>
-                    <div class="floating-tag ft-3" style="background:rgba(139,115,85,0.15);color:#8B7355;border-color:rgba(139,115,85,0.3)">Bisaya</div>
                 </div>
                 <div class="showcase-info">
-                    <div class="showcase-badge bahaw-badge">
-                        <span class="badge-pulse bahaw-pulse"></span>
+                    <div class="showcase-badge badge-brown">
+                        <span class="badge-pulse pulse-brown"></span>
                         Live
                     </div>
                     <h3>BAHAW Studio</h3>
-                    <p>Cebuano-themed streetwear brand. Embroidered caps, snapbacks, beanies, visors, and oversized organic tees — bold Bisaya slang from Cebu to the world.</p>
+                    <p>Cebuano-themed streetwear brand. Printed caps, snapbacks, beanies, visors, and oversized organic tees — bold Bisaya slang from Cebu to the world.</p>
                     <div class="feature-list">
-                        <div class="fl"><span class="fl-icon bahaw-icon">&#10003;</span> New Drop collection showcase</div>
-                        <div class="fl"><span class="fl-icon bahaw-icon">&#10003;</span> 6 product categories with filtering</div>
-                        <div class="fl"><span class="fl-icon bahaw-icon">&#10003;</span> Etsy-integrated storefront</div>
-                        <div class="fl"><span class="fl-icon bahaw-icon">&#10003;</span> Organic & eco-friendly apparel line</div>
-                        <div class="fl"><span class="fl-icon bahaw-icon">&#10003;</span> PWA (installable, works offline)</div>
-                        <div class="fl"><span class="fl-icon bahaw-icon">&#10003;</span> Worldwide shipping via Etsy</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> New Drop collection showcase</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> 6 product categories with filtering</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Etsy-integrated storefront</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Organic & eco-friendly apparel line</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> PWA (installable, works offline)</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Worldwide shipping via Etsy</div>
                     </div>
                     <div class="tech-stack">
                         <span>HTML/CSS/JS</span><span>GitHub Pages</span><span>PWA</span><span>Etsy + Printful</span>
                     </div>
-                    <a href="https://bahaw-studio.github.io" target="_blank" rel="noopener" class="btn btn-showcase bahaw-btn">
+                    <a href="https://bahaw-studio.github.io" target="_blank" rel="noopener" class="btn btn-sm btn-brown">
                         Visit BAHAW Studio
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </a>
                 </div>
             </div>
 
             <!-- CEBUAI SHOWCASE -->
-            <div class="showcase showcase-flip reveal" data-parallax="0.02">
+            <div class="showcase showcase-flip reveal">
                 <div class="showcase-visual">
-                    <div class="showcase-glow ai-glow"></div>
                     <div class="browser-mock">
                         <div class="bm-bar">
                             <div class="bm-dots"><i></i><i></i><i></i></div>
@@ -356,39 +336,35 @@
                             <iframe src="https://cebulandmarket.github.io/cebuai-services/" loading="lazy" title="CebuAI Services Preview"></iframe>
                         </div>
                     </div>
-                    <div class="floating-tag ft-1 cyan">AI-Powered</div>
-                    <div class="floating-tag ft-2 cyan">Videos</div>
-                    <div class="floating-tag ft-3 cyan">Content</div>
                 </div>
                 <div class="showcase-info">
-                    <div class="showcase-badge ai-badge">
-                        <span class="badge-pulse ai-pulse"></span>
+                    <div class="showcase-badge badge-cyan">
+                        <span class="badge-pulse pulse-cyan"></span>
                         Live
                     </div>
                     <h3>CebuAI Services</h3>
                     <p>AI-powered digital agency for Cebu businesses. Promo videos, social media content, voiceovers, and websites — built faster and cheaper with AI.</p>
                     <div class="feature-list">
-                        <div class="fl"><span class="fl-icon ai-icon">&#10003;</span> AI promo videos & reels</div>
-                        <div class="fl"><span class="fl-icon ai-icon">&#10003;</span> Social media content packs</div>
-                        <div class="fl"><span class="fl-icon ai-icon">&#10003;</span> AI voiceover narration</div>
-                        <div class="fl"><span class="fl-icon ai-icon">&#10003;</span> Website building</div>
-                        <div class="fl"><span class="fl-icon ai-icon">&#10003;</span> SEO & analytics setup</div>
-                        <div class="fl"><span class="fl-icon ai-icon">&#10003;</span> Starting at P2,000</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> AI promo videos & reels</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Social media content packs</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> AI voiceover narration</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Website building</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> SEO & analytics setup</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Starting at P2,000</div>
                     </div>
                     <div class="tech-stack">
                         <span>Claude AI</span><span>Edge TTS</span><span>FFmpeg</span><span>HTML/CSS/JS</span>
                     </div>
-                    <a href="https://cebulandmarket.github.io/cebuai-services/" target="_blank" rel="noopener" class="btn btn-showcase ai-btn" style="cursor:pointer">
+                    <a href="https://cebulandmarket.github.io/cebuai-services/" target="_blank" rel="noopener" class="btn btn-sm btn-cyan">
                         Visit CebuAI Services
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </a>
                 </div>
             </div>
 
             <!-- MYTALENTMYDREAM SHOWCASE -->
-            <div class="showcase reveal" data-parallax="0.02">
+            <div class="showcase reveal">
                 <div class="showcase-visual">
-                    <div class="showcase-glow mtmd-glow"></div>
                     <div class="browser-mock">
                         <div class="bm-bar">
                             <div class="bm-dots"><i></i><i></i><i></i></div>
@@ -401,39 +377,35 @@
                             <iframe src="https://mytalentmydream.github.io/" loading="lazy" title="MyTalentMyDream Preview"></iframe>
                         </div>
                     </div>
-                    <div class="floating-tag ft-1" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.3)">Social Good</div>
-                    <div class="floating-tag ft-2" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.3)">GoFundMe</div>
-                    <div class="floating-tag ft-3" style="background:rgba(245,158,11,0.15);color:#f59e0b;border-color:rgba(245,158,11,0.3)">Talents</div>
                 </div>
                 <div class="showcase-info">
-                    <div class="showcase-badge mtmd-badge">
-                        <span class="badge-pulse mtmd-pulse"></span>
+                    <div class="showcase-badge badge-amber">
+                        <span class="badge-pulse pulse-amber"></span>
                         Live
                     </div>
                     <h3>MyTalent.MyDream</h3>
                     <p>A free platform that builds personal web pages for talented underprivileged people in Cebu and connects them with donors via GoFundMe.</p>
                     <div class="feature-list">
-                        <div class="fl"><span class="fl-icon mtmd-icon">&#10003;</span> Free personal talent pages</div>
-                        <div class="fl"><span class="fl-icon mtmd-icon">&#10003;</span> GoFundMe donation integration</div>
-                        <div class="fl"><span class="fl-icon mtmd-icon">&#10003;</span> Browse & discover talents</div>
-                        <div class="fl"><span class="fl-icon mtmd-icon">&#10003;</span> Talent submission form</div>
-                        <div class="fl"><span class="fl-icon mtmd-icon">&#10003;</span> Social media sharing</div>
-                        <div class="fl"><span class="fl-icon mtmd-icon">&#10003;</span> Sponsor & mentor program</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Free personal talent pages</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> GoFundMe donation integration</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Browse & discover talents</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Talent submission form</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Social media sharing</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Sponsor & mentor program</div>
                     </div>
                     <div class="tech-stack">
                         <span>HTML/CSS/JS</span><span>GitHub Pages</span><span>GoFundMe</span><span>SEO</span>
                     </div>
-                    <a href="https://mytalentmydream.github.io/" target="_blank" rel="noopener" class="btn btn-showcase mtmd-btn">
+                    <a href="https://mytalentmydream.github.io/" target="_blank" rel="noopener" class="btn btn-sm btn-amber">
                         Visit MyTalentMyDream
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </a>
                 </div>
             </div>
 
             <!-- SKILLBLOOM SHOWCASE -->
-            <div class="showcase showcase-flip reveal" data-parallax="0.02">
+            <div class="showcase showcase-flip reveal">
                 <div class="showcase-visual">
-                    <div class="showcase-glow bloom-glow"></div>
                     <div class="browser-mock">
                         <div class="bm-bar">
                             <div class="bm-dots"><i></i><i></i><i></i></div>
@@ -446,156 +418,187 @@
                             <iframe src="https://cebulandmarket.github.io/skillbloom/" loading="lazy" title="SkillBloom Preview"></iframe>
                         </div>
                     </div>
-                    <div class="floating-tag ft-1" style="background:rgba(34,197,94,0.15);color:#22c55e;border-color:rgba(34,197,94,0.3)">Quiz</div>
-                    <div class="floating-tag ft-2" style="background:rgba(34,197,94,0.15);color:#22c55e;border-color:rgba(34,197,94,0.3)">Career</div>
-                    <div class="floating-tag ft-3" style="background:rgba(34,197,94,0.15);color:#22c55e;border-color:rgba(34,197,94,0.3)">Filipino</div>
                 </div>
                 <div class="showcase-info">
-                    <div class="showcase-badge bloom-badge">
-                        <span class="badge-pulse bloom-pulse"></span>
+                    <div class="showcase-badge badge-emerald">
+                        <span class="badge-pulse pulse-emerald"></span>
                         Live
                     </div>
                     <h3>SkillBloom</h3>
                     <p>A talent discovery quiz for Filipinos. Answer 10 personality-based questions and discover your hidden talent, career paths, and earning potential.</p>
                     <div class="feature-list">
-                        <div class="fl"><span class="fl-icon bloom-icon">&#10003;</span> 10-question personality quiz</div>
-                        <div class="fl"><span class="fl-icon bloom-icon">&#10003;</span> Trait-based personality breakdown</div>
-                        <div class="fl"><span class="fl-icon bloom-icon">&#10003;</span> Career paths with peso estimates</div>
-                        <div class="fl"><span class="fl-icon bloom-icon">&#10003;</span> 8 unique personality profiles</div>
-                        <div class="fl"><span class="fl-icon bloom-icon">&#10003;</span> Inspirational Filipino stories</div>
-                        <div class="fl"><span class="fl-icon bloom-icon">&#10003;</span> Step-by-step action plans</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> 10-question personality quiz</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Trait-based personality breakdown</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Career paths with peso estimates</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> 8 unique personality profiles</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Inspirational Filipino stories</div>
+                        <div class="fl"><span class="fl-check">&#10003;</span> Step-by-step action plans</div>
                     </div>
                     <div class="tech-stack">
                         <span>HTML/CSS/JS</span><span>GitHub Pages</span><span>Mobile-First</span><span>Quiz Engine</span>
                     </div>
-                    <a href="https://cebulandmarket.github.io/skillbloom/" target="_blank" rel="noopener" class="btn btn-showcase bloom-btn">
+                    <a href="https://cebulandmarket.github.io/skillbloom/" target="_blank" rel="noopener" class="btn btn-sm btn-emerald">
                         Visit SkillBloom
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-
     <!-- PROCESS -->
-    <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#06060f"/></svg>
-    <section id="process" class="section sec-full-dark has-grid-bg">
+    <section id="process" class="section">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// how it works</div>
-                <h2>Message Us Today.<br><span class="gradient-text">Go Live This Week.</span></h2>
+                <p class="section-tag">How It Works</p>
+                <h2>Message Us Today. Go Live This Week.</h2>
             </div>
             <div class="process-cards reveal">
-                <div class="proc-card tilt-card">
-                    <div class="card-shine"></div>
+                <div class="proc-card">
                     <div class="proc-num">01</div>
-                    <div class="proc-line-glow"></div>
                     <h3>Send Us a Message</h3>
                     <p>Tell us about your business. What you need, your budget, your vision. We reply in under 24 hours.</p>
-                    <div class="proc-tag">&#8987; Takes 2 minutes</div>
+                    <div class="proc-tag">Takes 2 minutes</div>
                 </div>
-                <div class="proc-arrow">&#8594;</div>
-                <div class="proc-card tilt-card">
-                    <div class="card-shine"></div>
+                <div class="proc-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+                <div class="proc-card">
                     <div class="proc-num">02</div>
-                    <div class="proc-line-glow"></div>
                     <h3>We Build It From Scratch</h3>
                     <p>Custom design. Custom code. You get a preview link to review. We refine until you love it.</p>
-                    <div class="proc-tag">&#9889; 1-5 days</div>
+                    <div class="proc-tag">1-5 days</div>
                 </div>
-                <div class="proc-arrow">&#8594;</div>
-                <div class="proc-card tilt-card">
-                    <div class="card-shine"></div>
+                <div class="proc-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+                <div class="proc-card">
                     <div class="proc-num">03</div>
-                    <div class="proc-line-glow"></div>
                     <h3>You're Live</h3>
                     <p>Domain set up. Google configured. Your business is officially online and findable. Done.</p>
-                    <div class="proc-tag">&#127881; You're online</div>
+                    <div class="proc-tag">You're online</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PRICING -->
-    <section id="pricing" class="section sec-full-dark pricing-section">
+    <section id="pricing" class="section section-alt">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// invest in your business</div>
-                <h2>One Payment. Your Business Online.<br><span class="gradient-text">Forever.</span></h2>
+                <p class="section-tag">Pricing</p>
+                <h2>One Payment. Your Business Online. Forever.</h2>
                 <p>No subscriptions. No hidden fees. Pay once, own it forever.</p>
             </div>
-            <div class="pricing-grid reveal">
-                <div class="price-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="pc-header">
-                        <div class="pc-tier">Starter</div>
-                        <div class="pc-price">&#8369;5,000</div>
-                        <div class="pc-note">one-time payment</div>
+            <div class="p3-grid reveal">
+
+                <!-- STARTER -->
+                <div class="p3-card">
+                    <div class="p3-color-bar bar-blue"></div>
+                    <div class="p3-badge badge-blue">STARTER</div>
+                    <div class="p3-pages">1-3 Pages</div>
+                    <div class="p3-price-block">
+                        <span class="p3-peso">&#8369;</span><span class="p3-amount">5,000</span>
                     </div>
-                    <div class="pc-desc">Perfect for new businesses that need a professional online presence fast.</div>
-                    <ul class="pc-list">
-                        <li>1-3 page website</li>
-                        <li>Mobile responsive</li>
-                        <li>Contact form</li>
-                        <li>Free hosting setup</li>
-                        <li>Delivered in 24-48 hours</li>
+                    <div class="p3-onetime">ONE-TIME PAYMENT</div>
+                    <div class="p3-delivery">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Delivered in 24-48 hours
+                    </div>
+                    <div class="p3-divider"></div>
+                    <div class="p3-includes">What You Get:</div>
+                    <ul class="p3-list">
+                        <li><span class="p3-check check-blue">&#10003;</span> Custom-coded website</li>
+                        <li><span class="p3-check check-blue">&#10003;</span> Mobile responsive design</li>
+                        <li><span class="p3-check check-blue">&#10003;</span> Contact form</li>
+                        <li><span class="p3-check check-blue">&#10003;</span> Free hosting setup</li>
+                        <li><span class="p3-check check-blue">&#10003;</span> You own everything</li>
                     </ul>
-                    <a href="#contact" class="btn btn-price">Get Started</a>
+                    <a href="#contact" class="btn p3-btn">Get Your Website</a>
                 </div>
-                <div class="price-card price-featured tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="pf-badge">Most Popular</div>
-                    <div class="pc-header">
-                        <div class="pc-tier">Business</div>
-                        <div class="pc-price">&#8369;10,000</div>
-                        <div class="pc-note">one-time payment</div>
+
+                <!-- BUSINESS — FEATURED -->
+                <div class="p3-card p3-featured">
+                    <div class="p3-pop-label">BEST VALUE</div>
+                    <div class="p3-color-bar bar-indigo"></div>
+                    <div class="p3-badge badge-indigo">BUSINESS</div>
+                    <div class="p3-pages">5-8 Pages</div>
+                    <div class="p3-price-block">
+                        <span class="p3-peso">&#8369;</span><span class="p3-amount p3-amount-featured">10,000</span>
                     </div>
-                    <div class="pc-desc">For businesses ready to dominate their market with a full online presence.</div>
-                    <ul class="pc-list">
-                        <li>5-8 page website</li>
-                        <li>Mobile responsive</li>
-                        <li>Contact + Messenger</li>
-                        <li>Google SEO setup</li>
-                        <li>Free hosting setup</li>
-                        <li>Social media integration</li>
-                        <li>Delivered in 3-5 days</li>
+                    <div class="p3-onetime">ONE-TIME PAYMENT</div>
+                    <div class="p3-delivery">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Delivered in 3-5 days
+                    </div>
+                    <div class="p3-divider"></div>
+                    <div class="p3-includes">Everything in Starter, plus:</div>
+                    <ul class="p3-list">
+                        <li><span class="p3-check check-indigo">&#10003;</span> 5-8 custom pages</li>
+                        <li><span class="p3-check check-indigo">&#10003;</span> Google SEO setup</li>
+                        <li><span class="p3-check check-indigo">&#10003;</span> Messenger integration</li>
+                        <li><span class="p3-check check-indigo">&#10003;</span> Social media links</li>
+                        <li><span class="p3-check check-indigo">&#10003;</span> Free domain setup</li>
+                        <li><span class="p3-check check-indigo">&#10003;</span> Google Search Console</li>
+                        <li><span class="p3-check check-indigo">&#10003;</span> Unlimited revisions</li>
                     </ul>
-                    <a href="#contact" class="btn btn-glow btn-price">Get Started</a>
+                    <a href="#contact" class="btn btn-primary p3-btn">Get Your Website Today</a>
                 </div>
-                <div class="price-card tilt-card">
-                    <div class="card-shine"></div>
-                    <div class="pc-header">
-                        <div class="pc-tier">Platform</div>
-                        <div class="pc-price">&#8369;20K<span>+</span></div>
-                        <div class="pc-note">one-time payment</div>
+
+                <!-- PLATFORM -->
+                <div class="p3-card">
+                    <div class="p3-color-bar bar-cyan"></div>
+                    <div class="p3-badge badge-teal">PLATFORM</div>
+                    <div class="p3-pages">Unlimited Pages</div>
+                    <div class="p3-price-block">
+                        <span class="p3-peso">&#8369;</span><span class="p3-amount">20K<span class="p3-plus">+</span></span>
                     </div>
-                    <div class="pc-desc">Full custom platform with search, listings, admin panel — like CebuLandMarket.</div>
-                    <ul class="pc-list">
-                        <li>Custom web app</li>
-                        <li>Search, filters, listings</li>
-                        <li>Admin features</li>
-                        <li>PWA (installable app)</li>
-                        <li>Full SEO optimization</li>
-                        <li>Priority support</li>
-                        <li>Delivered in 1-2 weeks</li>
+                    <div class="p3-onetime">ONE-TIME PAYMENT</div>
+                    <div class="p3-delivery">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Delivered in 1-2 weeks
+                    </div>
+                    <div class="p3-divider"></div>
+                    <div class="p3-includes">Everything in Business, plus:</div>
+                    <ul class="p3-list">
+                        <li><span class="p3-check check-teal">&#10003;</span> Full custom web app</li>
+                        <li><span class="p3-check check-teal">&#10003;</span> Search, filters, listings</li>
+                        <li><span class="p3-check check-teal">&#10003;</span> Admin panel</li>
+                        <li><span class="p3-check check-teal">&#10003;</span> PWA (installable app)</li>
+                        <li><span class="p3-check check-teal">&#10003;</span> Offline support</li>
+                        <li><span class="p3-check check-teal">&#10003;</span> Full SEO optimization</li>
+                        <li><span class="p3-check check-teal">&#10003;</span> Priority support forever</li>
                     </ul>
-                    <a href="#contact" class="btn btn-price">Get a Quote</a>
+                    <a href="#contact" class="btn p3-btn">Get a Custom Quote</a>
                 </div>
             </div>
-            <div class="addons-row reveal">
-                <div class="addon-chip">Monthly Maintenance <strong>&#8369;1,000/mo</strong></div>
-                <div class="addon-chip">Custom Domain <strong>&#8369;500-1,500/yr</strong></div>
+
+            <!-- GUARANTEE BAR -->
+            <div class="p3-guarantee reveal">
+                <div class="p3-g-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <span>DTI-Registered Business</span>
+                </div>
+                <div class="p3-g-divider"></div>
+                <div class="p3-g-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+                    <span>Maintenance &#8369;1,000/mo <em>(optional)</em></span>
+                </div>
+                <div class="p3-g-divider"></div>
+                <div class="p3-g-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    <span>Domain &#8369;500-1,500/yr</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY US — HORIZONTAL SCROLL-LIKE -->
-    <section class="section sec-full-dark">
+    <!-- WHY US -->
+    <section class="section">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// the difference</div>
-                <h2>Other Developers vs. <span class="gradient-text">WebCraft PH</span></h2>
+                <p class="section-tag">The Difference</p>
+                <h2>Other Developers vs. WebCraft PH</h2>
             </div>
             <div class="compare-grid reveal">
                 <div class="compare-col compare-them">
@@ -609,7 +612,7 @@
                 </div>
                 <div class="compare-vs">VS</div>
                 <div class="compare-col compare-us">
-                    <div class="compare-header glow-header">WebCraft PH</div>
+                    <div class="compare-header compare-header-us">WebCraft PH</div>
                     <div class="compare-item good">Custom-coded from scratch</div>
                     <div class="compare-item good">Delivered in 48 hours to 5 days</div>
                     <div class="compare-item good">You own everything</div>
@@ -622,13 +625,12 @@
     </section>
 
     <!-- PRICE CALCULATOR -->
-    <section class="section sec-full-dark has-grid-bg">
-        <div class="grid-bg"></div>
-        <div class="container" style="position:relative;z-index:2;">
+    <section class="section section-alt">
+        <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// estimate</div>
-                <h2>Build Your Quote in <span class="gradient-text">10 Seconds</span></h2>
-                <p>Drag the sliders. See your price update live.</p>
+                <p class="section-tag">Estimate</p>
+                <h2>Build Your Quote in 10 Seconds</h2>
+                <p>Drag the slider. See your price update live.</p>
             </div>
             <div class="calc-card reveal">
                 <div class="calc-sliders">
@@ -652,18 +654,102 @@
                     <div class="calc-result-label">Estimated Price</div>
                     <div class="calc-price" id="calcPrice">P5,000</div>
                     <div class="calc-note">One-time payment. No subscriptions.</div>
-                    <a href="#contact" class="btn btn-glow" style="margin-top:1.5rem;">Get This Quote</a>
+                    <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">Get This Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT THE BUILDER -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">About</p>
+                <h2>Built by a Real Person. Not an Agency Template.</h2>
+            </div>
+            <div class="about-card reveal">
+                <div class="about-left">
+                    <div class="about-avatar">
+                        <div class="about-avatar-inner">R</div>
+                    </div>
+                    <div class="about-name">Rea Rusiana</div>
+                    <div class="about-title">Founder, WebCraft PH</div>
+                    <div class="about-badges">
+                        <span class="about-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            DTI Registered
+                        </span>
+                        <span class="about-badge">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Cebu, Philippines
+                        </span>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <p>I started WebCraft PH because I saw too many Filipino businesses paying too much for websites that don't even work right on mobile.</p>
+                    <p>Every site I build is hand-coded from scratch — no WordPress templates, no Wix, no page builders. Just clean, fast code that actually works for your customers.</p>
+                    <p>I've already built and shipped <strong>6 live platforms</strong> — from property listings to e-commerce to AI services. All of them are running right now, serving real users.</p>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                            Send Me a Message
+                        </a>
+                        <a href="#portfolio" class="btn btn-outline">See My Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTS (replaced fake testimonials) -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">Results</p>
+                <h2>What We've Delivered</h2>
+                <p>Real numbers from real projects we built and launched.</p>
+            </div>
+            <div class="results-grid reveal">
+                <div class="result-card">
+                    <div class="result-number">6</div>
+                    <div class="result-label">Platforms Built & Launched</div>
+                    <div class="result-detail">All live and serving real users right now</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">48hr</div>
+                    <div class="result-label">Fastest Delivery</div>
+                    <div class="result-detail">From first message to live website</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">100%</div>
+                    <div class="result-label">Custom Code</div>
+                    <div class="result-detail">Zero templates, zero page builders</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">&lt;2s</div>
+                    <div class="result-label">Load Time</div>
+                    <div class="result-detail">Even on slow Philippine mobile data</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">PWA</div>
+                    <div class="result-label">Offline Support</div>
+                    <div class="result-detail">Apps that work without internet</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">DTI</div>
+                    <div class="result-label">Registered Business</div>
+                    <div class="result-detail">BN No. 7923972 — valid until 2031</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section sec-full-dark">
+    <section class="section">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-tag">// questions</div>
-                <h2>Got Questions? <span class="gradient-text">We Got Answers.</span></h2>
+                <p class="section-tag">FAQ</p>
+                <h2>Got Questions? We Got Answers.</h2>
             </div>
             <div class="faq-list reveal">
                 <div class="faq-item">
@@ -699,11 +785,11 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section sec-full-dark contact-section">
+    <section id="contact" class="section section-alt">
         <div class="container">
             <div class="contact-wrapper reveal">
                 <div class="contact-left">
-                    <div class="section-tag">// let's go</div>
+                    <p class="section-tag">Let's Go</p>
                     <h2>Ready to Put Your Business Online?</h2>
                     <p>Send us a message. No commitment. No fees until you're happy. We reply within 24 hours.</p>
                     <div class="contact-perks">
@@ -717,19 +803,6 @@
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
                             r.reafil2@gmail.com
                         </a>
-                    </div>
-                    <div class="contact-code">
-                        <code>
-                            <span class="cc-gray">// your business online in days</span><br>
-                            <span class="cc-purple">const</span> site = <span class="cc-green">WebCraft</span>.<span class="cc-blue">build</span>({<br>
-                            &nbsp;&nbsp;client: <span class="cc-orange">"Your Business"</span>,<br>
-                            &nbsp;&nbsp;fast: <span class="cc-purple">true</span>,<br>
-                            &nbsp;&nbsp;mobile: <span class="cc-purple">true</span>,<br>
-                            &nbsp;&nbsp;seo: <span class="cc-purple">true</span>,<br>
-                            &nbsp;&nbsp;custom: <span class="cc-purple">true</span><br>
-                            });<br>
-                            <span class="cc-gray">// => "yourname.com is live!"</span>
-                        </code>
                     </div>
                 </div>
                 <div class="contact-right">
@@ -754,7 +827,7 @@
                             <label>What do you need?</label>
                             <textarea name="message" rows="4" required placeholder="Tell us about your business and what kind of website you need..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-glow btn-full">
+                        <button type="submit" class="btn btn-primary btn-full">
                             <span>Send Message</span>
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                         </button>
@@ -766,31 +839,61 @@
     </section>
 
     <!-- FLOATING CHAT BUTTON -->
-    <a href="#contact" class="float-chat" id="floatChat" title="Get a Quote">
+    <a href="#contact" class="float-chat" id="floatChat" title="Send us a message">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
     </a>
 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-inner">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo">
                         <span class="logo-cube"><span>W</span></span>
                         <span class="logo-text">Web<span class="logo-highlight">Craft</span> PH</span>
                     </a>
-                    <p>Professional websites for Philippine businesses.</p>
+                    <p>Professional websites for Philippine businesses. Custom-coded, fast, and built to grow your business online.</p>
                 </div>
-                <div class="footer-links">
-                    <a href="#services">Services</a>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="#services">Custom Websites</a>
+                    <a href="#services">Web Applications</a>
+                    <a href="#services">PWA Development</a>
+                    <a href="#services">SEO Optimization</a>
+                    <a href="#services">Domain Setup</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
                     <a href="#portfolio">Portfolio</a>
                     <a href="#pricing">Pricing</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://mytalentmydream.github.io/" target="_blank" style="color:#F59E0B;font-weight:700;">🌱 MyTalentMyDream</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Location</h4>
+                    <div class="footer-address">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Cebu, Philippines
+                    </div>
+                    <div class="footer-address">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+                        r.reafil2@gmail.com
+                    </div>
+                    <div class="footer-dti">
+                        <div class="dti-seal">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div>
+                            <div class="dti-label">DTI Registered</div>
+                            <div class="dti-detail">BN No. 7923972</div>
+                            <div class="dti-detail">Valid until 2031</div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; WebCraft PH. All rights reserved.</p>
+                <p>&copy; 2026 WebCraft PH. All rights reserved.</p>
+                <p class="footer-legal">WEBCRAFTPH PROPERTY SERVICES &mdash; DTI-Registered Business</p>
             </div>
         </div>
     </footer>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — WebCraft PH</title>
+    <meta name="description" content="Get in touch with WebCraft PH. Tell us about your business and we'll build you a custom website. Free consultation, 24-hour response time.">
+    <meta property="og:title" content="Contact — WebCraft PH">
+    <meta property="og:description" content="Get in touch with WebCraft PH. Tell us about your business and we'll build you a custom website. Free consultation, 24-hour response time.">
+    <meta property="og:image" content="https://webcraftph.com/og-image.png">
+    <meta property="og:url" content="https://webcraftph.com/contact.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact — WebCraft PH">
+    <meta name="twitter:description" content="Get in touch with WebCraft PH. Tell us about your business and we'll build you a custom website.">
+    <meta name="twitter:image" content="https://webcraftph.com/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366f1'/><text x='50' y='72' font-family='Arial' font-size='65' font-weight='900' fill='white' text-anchor='middle'>W</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-cube"><span>W</span></span>
+                <span class="logo-text">Web<span class="logo-highlight">Craft</span> PH</span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="work.html">Portfolio</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="contact.html#about" class="active">About</a></li>
+                <li><a href="contact.html#contact" class="btn btn-nav">Start a Project</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="toggle-icon sun">&#9728;</span>
+                <span class="toggle-icon moon">&#9790;</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE BANNER -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Learn about us, estimate your project, or start a conversation.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT — with photo bg -->
+    <section id="about" class="section photo-section photo-contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">About</p>
+                <h2>One Developer. Six Live Projects. Zero Templates.</h2>
+            </div>
+            <div class="about-card reveal">
+                <div class="about-left">
+                    <div class="about-avatar"><div class="about-avatar-inner">R</div></div>
+                    <div class="about-name">Rea Rusiana</div>
+                    <div class="about-title">Founder & Developer</div>
+                    <div class="about-badges">
+                        <span class="about-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> DTI Registered</span>
+                        <span class="about-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Cebu, Philippines</span>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <p>I started WebCraft PH because too many Filipino businesses are paying P30,000+ for WordPress sites that load in 8 seconds and look like everyone else's.</p>
+                    <p>Every site I build is written line by line — no templates, no page builders, no shortcuts. The result is a website that loads instantly, ranks on Google, and actually gets you customers.</p>
+                    <p>I've shipped <strong>6 production platforms</strong> — property listings, e-commerce, AI services, talent discovery. All live, all serving real users, all built by one person.</p>
+                    <div class="about-cta">
+                        <a href="#contact" class="btn btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg> Let's Talk</a>
+                        <a href="work.html" class="btn btn-outline">See the Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">Estimate</p>
+                <h2>Get Your Price in 10 Seconds</h2>
+                <p>Drag the slider and check the features you need.</p>
+            </div>
+            <div class="calc-card reveal">
+                <div class="calc-sliders">
+                    <div class="calc-group">
+                        <label>Number of Pages</label>
+                        <input type="range" min="1" max="15" value="3" class="calc-range" id="calcPages">
+                        <div class="calc-range-labels"><span>1</span><span id="calcPagesVal">3</span><span>15</span></div>
+                    </div>
+                    <div class="calc-group">
+                        <label>Features</label>
+                        <div class="calc-checks">
+                            <label class="calc-check"><input type="checkbox" checked data-price="0" id="feat-mobile"><span>Mobile Responsive</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="2000" id="feat-seo"><span>Google SEO (+P2,000)</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="1500" id="feat-messenger"><span>Messenger + Forms (+P1,500)</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="3000" id="feat-pwa"><span>PWA / Installable (+P3,000)</span></label>
+                            <label class="calc-check"><input type="checkbox" data-price="1000" id="feat-domain"><span>Domain Setup (+P1,000)</span></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-result">
+                    <div class="calc-result-label">Estimated Price</div>
+                    <div class="calc-price" id="calcPrice">P5,000</div>
+                    <div class="calc-note">One-time payment. No subscriptions.</div>
+                    <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;">Get This Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <p class="section-tag">FAQ</p>
+                <h2>Common Questions</h2>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item"><button class="faq-q">How fast can you build my website?<span class="faq-icon">+</span></button><div class="faq-a"><p>Starter sites: 24-48 hours. Business sites: 3-5 days. Full platforms: 1-2 weeks. We move fast because we don't use templates — we know our code.</p></div></div>
+                <div class="faq-item"><button class="faq-q">Do I need to know anything technical?<span class="faq-icon">+</span></button><div class="faq-a"><p>Nothing. You tell us what your business does and what you want. We handle everything — design, code, hosting, domain, SEO. Just send a message.</p></div></div>
+                <div class="faq-item"><button class="faq-q">What if I don't like the design?<span class="faq-icon">+</span></button><div class="faq-a"><p>You get a live preview link before anything goes public. We revise until you love it. We don't launch anything you haven't approved.</p></div></div>
+                <div class="faq-item"><button class="faq-q">Do I really own the website?<span class="faq-icon">+</span></button><div class="faq-a"><p>100%. The code, the design, the domain — everything is yours. No lock-in. You can take it to another developer anytime. We never hold your site hostage.</p></div></div>
+                <div class="faq-item"><button class="faq-q">Are there monthly fees?<span class="faq-icon">+</span></button><div class="faq-a"><p>No. You pay once, it's yours forever. We offer optional maintenance at P1,000/month if you want us to handle updates, but it's completely optional.</p></div></div>
+                <div class="faq-item"><button class="faq-q">Will my site show up on Google?<span class="faq-icon">+</span></button><div class="faq-a"><p>Yes. Business and Platform packages include full SEO setup — Google Search Console registration, meta tags, sitemap, page speed optimization. We make sure Google can find you.</p></div></div>
+                <div class="faq-item"><button class="faq-q">What's a PWA?<span class="faq-icon">+</span></button><div class="faq-a"><p>Progressive Web App — your website can be installed on phones like a real app from the Play Store. It works offline, loads instantly, and sits on the home screen. Perfect for businesses with mobile customers.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT — with photo bg -->
+    <section id="contact" class="section photo-section photo-contact">
+        <div class="container">
+            <div class="contact-wrapper reveal">
+                <div class="contact-left">
+                    <p class="section-tag">Start a Project</p>
+                    <h2>Let's Build Something</h2>
+                    <p>Tell us about your business. No commitment, no fees upfront. We reply within 24 hours.</p>
+                    <div class="contact-perks">
+                        <div class="cp"><span class="cp-dot"></span> Free consultation</div>
+                        <div class="cp"><span class="cp-dot"></span> No commitment required</div>
+                        <div class="cp"><span class="cp-dot"></span> 24-hour response time</div>
+                        <div class="cp"><span class="cp-dot"></span> DTI-registered business</div>
+                    </div>
+                    <div class="contact-details">
+                        <a href="mailto:r.reafil2@gmail.com" class="contact-link">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+                            r.reafil2@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="09df7276-a4b9-440c-9342-b4c7971c1dce">
+                        <input type="hidden" name="subject" value="WebCraft PH — New Inquiry">
+                        <input type="hidden" name="from_name" value="WebCraft PH Website">
+                        <input type="checkbox" name="botcheck" style="display:none;">
+                        <div class="form-group"><label>Name</label><input type="text" name="name" required placeholder="Juan Dela Cruz"></div>
+                        <div class="form-group"><label>Phone or Email</label><input type="text" name="contact" required placeholder="09XX XXX XXXX"></div>
+                        <div class="form-group"><label>Business Name <span class="optional">(optional)</span></label><input type="text" name="business" placeholder="Your business name"></div>
+                        <div class="form-group"><label>What do you need?</label><textarea name="message" rows="4" required placeholder="Tell us about your business and what kind of website you're looking for..."></textarea></div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                        <div id="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING CHAT -->
+    <a href="#contact" class="float-chat" id="floatChat" title="Start a project">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </a>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><span class="logo-cube"><span>W</span></span><span class="logo-text">Web<span class="logo-highlight">Craft</span> PH</span></a>
+                    <p>Professional websites for Philippine businesses. Custom-coded, fast, and built to grow your business online.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <a href="index.html#services">Custom Websites</a>
+                    <a href="index.html#services">Web Applications</a>
+                    <a href="index.html#services">PWA Development</a>
+                    <a href="index.html#services">SEO Optimization</a>
+                    <a href="index.html#services">Domain Setup</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="work.html">Portfolio</a>
+                    <a href="index.html#pricing">Pricing</a>
+                    <a href="contact.html#about">About</a>
+                    <a href="contact.html#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Location</h4>
+                    <div class="footer-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Cebu, Philippines</div>
+                    <div class="footer-address"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg> r.reafil2@gmail.com</div>
+                    <div class="footer-dti">
+                        <div class="dti-seal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                        <div><div class="dti-label">DTI Registered</div><div class="dti-detail">BN No. 7923972</div><div class="dti-detail">Valid until 2031</div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WebCraft PH. All rights reserved.</p>
+                <p class="footer-legal">WEBCRAFTPH PROPERTY SERVICES &mdash; DTI-Registered Business</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

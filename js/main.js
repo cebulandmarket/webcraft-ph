@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===== TYPEWRITER =====
     var tw = document.getElementById('typewriter');
     if (tw) {
-        var words = ['Grow Your Business', 'Convert Visitors', 'Rank on Google', 'Work on Any Device', 'Look Professional'];
+        var words = ['find you on Google', 'trust your brand', 'contact you instantly', 'choose you over competitors', 'become paying customers'];
         var wordIdx = 0, charIdx = 0, deleting = false, pause = 0;
 
         function type() {

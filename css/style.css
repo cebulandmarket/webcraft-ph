@@ -514,7 +514,7 @@ body.light-mode .about-image{box-shadow:0 16px 48px rgba(0,0,0,0.1)}
 .about-prose p:last-child{margin-bottom:0}
 .about-prose .section-tag{margin-bottom:1rem}
 
-.prose-emphasis{margin:2rem 0;padding-left:1.5rem;border-left:3px solid var(--primary)}
+.prose-emphasis{margin:2rem 0}
 .prose-emphasis p{font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:.6rem;line-height:1.6}
 .prose-emphasis p:last-child{margin-bottom:0}
 

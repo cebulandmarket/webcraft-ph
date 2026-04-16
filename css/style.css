@@ -26,6 +26,32 @@ a{color:var(--primary-light);text-decoration:none}
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
+/* ========== PHOTO SECTIONS ========== */
+.photo-section{position:relative;overflow:hidden}
+.photo-section::before{content:'';position:absolute;inset:0;z-index:0}
+.photo-section::after{content:'';position:absolute;inset:0;z-index:0}
+.photo-section .container{position:relative;z-index:1}
+
+.photo-problem{background:url('../images/results-bg.jpg') center/cover no-repeat}
+.photo-problem::before{background:rgba(6,6,20,0.88)}
+
+.photo-about{background:url('../images/about-bg.jpg') center/cover no-repeat}
+.photo-about::before{background:rgba(6,6,20,0.85)}
+
+.photo-results{background:url('../images/results-bg.jpg') center/cover no-repeat}
+.photo-results::before{background:rgba(6,6,20,0.82)}
+
+.photo-contact{background:url('../images/contact-bg.jpg') center/cover no-repeat}
+.photo-contact::before{background:rgba(6,6,20,0.85)}
+
+.photo-section .section-header h2,.photo-section .section-header p:not(.section-tag),
+.photo-section .contact-left h2,.photo-section .contact-left > p,
+.photo-section .cp,.photo-section .contact-link{color:#e5e7eb}
+.photo-section .section-header h2,.photo-section .contact-left h2{color:#ffffff}
+.photo-section .result-card,.photo-section .about-card,.photo-section .contact-right{background:rgba(10,10,26,0.7);backdrop-filter:blur(12px);border-color:rgba(255,255,255,0.1)}
+.photo-section .proc-card{background:rgba(10,10,26,0.75);backdrop-filter:blur(12px);border-color:rgba(255,255,255,0.1)}
+.photo-section .problem-card{background:rgba(10,10,26,0.7);backdrop-filter:blur(12px);border-color:rgba(255,255,255,0.1)}
+
 /* ========== BUTTONS ========== */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem 1.8rem;border-radius:var(--radius-sm);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .25s ease;border:1.5px solid transparent;text-align:center}
 .btn-lg{padding:.9rem 2.2rem;font-size:.95rem}

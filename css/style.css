@@ -155,6 +155,12 @@ a{color:var(--primary-light);text-decoration:none}
 .preview-main img,.preview-back img{width:100%}
 img.preview-main,img.preview-back{object-fit:cover}
 
+/* Typewriter */
+.typewriter-wrap{white-space:nowrap}
+.typewriter{display:inline;color:var(--white);font-weight:700;border-bottom:2px solid var(--primary-light)}
+.cursor-blink{color:var(--primary-light);animation:blink 1s step-end infinite;font-weight:300}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
 /* Light mode hero */
 body.light-mode .hero{background:linear-gradient(160deg,#0f0f2e 0%,#1a1a45 40%,#15153d 70%,#0f0f2e 100%)}
 

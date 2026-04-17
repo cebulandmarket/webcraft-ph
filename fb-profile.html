@@ -1,23 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>WebCraft PH — Profile</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#111}
-.logo{width:500px;height:500px;background:linear-gradient(135deg,#ff3c00,#ff0080,#ff3c00);border-radius:80px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.logo::before{content:'';position:absolute;inset:8px;background:#0a0a0a;border-radius:72px}
-.inner{position:relative;z-index:1;text-align:center}
-.w{font-family:'Arial Black',sans-serif;font-size:220px;font-weight:900;color:transparent;background:linear-gradient(135deg,#ff3c00,#ff0080);-webkit-background-clip:text;background-clip:text;line-height:1}
-.text{font-family:'Arial Black',sans-serif;font-size:42px;font-weight:900;color:#fff;letter-spacing:8px;margin-top:-10px}
+  html,body{margin:0;padding:0;background:#0a0825}
+  .pp{
+    width:512px;height:512px;position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+    background:
+      radial-gradient(ellipse 60% 55% at 30% 25%,rgba(255,190,210,0.55) 0%,rgba(255,190,210,0) 60%),
+      radial-gradient(ellipse 55% 55% at 78% 80%,rgba(155,120,215,0.50) 0%,rgba(155,120,215,0) 65%),
+      radial-gradient(ellipse 50% 45% at 50% 50%,rgba(255,235,245,0.25) 0%,rgba(255,235,245,0) 70%),
+      linear-gradient(135deg,#12103a 0%,#251a52 50%,#12103a 100%)
+  }
+  .pp::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.08;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 0.95 0 0 0 0 0.97 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  svg{position:relative;z-index:1;filter:drop-shadow(0 12px 40px rgba(236,72,153,0.35))}
 </style>
 </head>
 <body>
-<div class="logo">
-    <div class="inner">
-        <div class="w">W</div>
-        <div class="text">CRAFT</div>
-    </div>
+<div class="pp">
+  <svg width="320" height="320" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#a5b4ff"/>
+        <stop offset=".5" stop-color="#f9a8d4"/>
+        <stop offset="1" stop-color="#fde68a"/>
+      </linearGradient>
+    </defs>
+    <path d="M 18 28 L 32 72 L 42 52 L 50 72 L 58 52 L 68 72 L 82 28"
+      stroke="url(#g)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </svg>
 </div>
 </body>
 </html>

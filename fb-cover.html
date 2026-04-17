@@ -1,43 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>WebCraft PH — FB Cover</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#111}
-.cover{width:1640px;height:624px;background:#0a0a0a;position:relative;overflow:hidden;display:flex;align-items:center;padding:0 100px}
-.cover::before{content:'';position:absolute;top:-200px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(255,60,0,0.3),transparent 70%);border-radius:50%}
-.cover::after{content:'';position:absolute;bottom:-150px;left:200px;width:500px;height:500px;background:radial-gradient(circle,rgba(255,0,128,0.2),transparent 70%);border-radius:50%}
-.content{position:relative;z-index:2;flex:1}
-.tagline{font-family:'Arial Black',sans-serif;font-size:72px;font-weight:900;color:#fff;line-height:1.1;max-width:800px}
-.tagline span{color:transparent;background:linear-gradient(135deg,#ff3c00,#ff0080);-webkit-background-clip:text;background-clip:text}
-.sub{font-family:Arial,sans-serif;font-size:24px;color:rgba(255,255,255,0.5);margin-top:20px;max-width:600px;line-height:1.5}
-.pills{display:flex;gap:12px;margin-top:30px}
-.pill{padding:10px 24px;border:2px solid rgba(255,60,0,0.4);border-radius:50px;font-family:'Arial Black',sans-serif;font-size:14px;color:#ff3c00;text-transform:uppercase;letter-spacing:2px}
-.right{position:relative;z-index:2;text-align:right}
-.price{font-family:'Arial Black',sans-serif;font-size:120px;font-weight:900;color:transparent;background:linear-gradient(135deg,#ff3c00,#ff0080);-webkit-background-clip:text;background-clip:text;line-height:1}
-.price-sub{font-family:Arial,sans-serif;font-size:22px;color:rgba(255,255,255,0.4);margin-top:5px}
-.url{font-family:'Courier New',monospace;font-size:20px;color:rgba(255,255,255,0.3);margin-top:20px;letter-spacing:2px}
-.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,60,0,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,60,0,0.03) 1px,transparent 1px);background-size:60px 60px;z-index:1}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',-apple-system,sans-serif}
+  html,body{margin:0;padding:0;background:#0a0825}
+  body{display:block}
+  .cover{
+    width:1640px;height:624px;position:relative;overflow:hidden;
+    padding:0 96px;display:flex;align-items:center;justify-content:space-between;gap:64px;
+    background:
+      radial-gradient(ellipse 70% 60% at 15% 15%,rgba(255,190,210,0.35) 0%,rgba(255,190,210,0) 60%),
+      radial-gradient(ellipse 60% 55% at 85% 80%,rgba(155,120,215,0.28) 0%,rgba(155,120,215,0) 65%),
+      radial-gradient(ellipse 55% 50% at 50% 35%,rgba(255,235,245,0.18) 0%,rgba(255,235,245,0) 70%),
+      radial-gradient(ellipse 80% 55% at 50% 100%,rgba(236,72,153,0.18) 0%,rgba(236,72,153,0) 75%),
+      linear-gradient(135deg,#0a0825 0%,#140f3a 55%,#0a0825 100%)
+  }
+  /* Silk light band */
+  .silk{position:absolute;inset:-10%;pointer-events:none;
+    background:linear-gradient(110deg,transparent 20%,rgba(255,210,225,0.12) 42%,rgba(235,205,245,0.18) 52%,rgba(255,210,225,0.12) 62%,transparent 82%);filter:blur(60px)}
+  /* Grain */
+  .grain{position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 0.95 0 0 0 0 0.97 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  .left{position:relative;z-index:2;max-width:880px}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:.75rem;padding:.5rem 1.2rem;border-radius:50px;
+    background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);color:#fff;font-size:16px;font-weight:700;letter-spacing:.04em;margin-bottom:28px;position:relative}
+  .eyebrow::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
+    background:linear-gradient(90deg,#6366f1 0%,#ec4899 50%,#f59e0b 100%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+  .eyebrow .bk{background:linear-gradient(90deg,#6366f1,#ec4899);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;font-size:22px}
+
+  h1{font-size:76px;font-weight:900;line-height:1;letter-spacing:-.02em;color:#fff}
+  h1 .hl{background:linear-gradient(90deg,#fca5ed 0%,#f9a8d4 40%,#c4b5fd 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  .sub{font-size:22px;color:rgba(255,255,255,0.72);margin-top:22px;line-height:1.45;max-width:720px;font-weight:400}
+
+  .pills{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+  .pill{padding:12px 26px;border-radius:50px;background:rgba(255,255,255,0.06);color:#fff;font-size:16px;font-weight:700;letter-spacing:.04em;position:relative;backdrop-filter:blur(8px)}
+  .pill::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;
+    background:linear-gradient(135deg,rgba(99,102,241,0.7),rgba(236,72,153,0.7));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+
+  /* RIGHT side: logo + url */
+  .right{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-end;gap:40px}
+
+  .logomark{width:240px;height:240px;border-radius:54px;background:linear-gradient(160deg,#12103a 0%,#251a52 100%);display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(99,102,241,0.25),inset 0 0 0 1.5px rgba(255,255,255,0.08);position:relative}
+  .logomark::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:2px;
+    background:linear-gradient(135deg,#6366f1 0%,#ec4899 50%,#f59e0b 100%);
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.8}
+
+  .wordmark{color:#fff;font-size:52px;font-weight:900;letter-spacing:-.02em;line-height:1;text-align:right}
+  .wordmark .hl{background:linear-gradient(90deg,#c4b5fd,#f9a8d4);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .wordmark .ph{color:#a79ec8;font-weight:700;font-size:.45em;margin-left:.4em;letter-spacing:.1em;vertical-align:super}
+
+  .url{font-family:'JetBrains Mono',monospace;font-size:20px;color:rgba(255,255,255,0.55);letter-spacing:.1em;text-transform:lowercase}
 </style>
 </head>
 <body>
+
 <div class="cover">
-    <div class="grid"></div>
-    <div class="content">
-        <div class="tagline">YOUR BUSINESS<br>NEEDS A <span>WEBSITE.</span><br>WE BUILD IT.</div>
-        <div class="sub">Custom-coded. Lightning fast. No templates. No subscriptions. You own everything.</div>
-        <div class="pills">
-            <div class="pill">48HR Delivery</div>
-            <div class="pill">Custom Code</div>
-            <div class="pill">Own It Forever</div>
-        </div>
+  <div class="silk"></div>
+  <div class="grain"></div>
+
+  <div class="left">
+    <div class="eyebrow"><span class="bk">&#10216;</span> Cebu-Based Web Studio <span class="bk">&#10217;</span></div>
+    <h1>Websites That <span class="hl">Feel Crafted,</span><br>Not Templated.</h1>
+    <p class="sub">Hand-coded, fast, and built to last — for businesses across the Philippines who want to stand out.</p>
+    <div class="pills">
+      <div class="pill">48HR DELIVERY</div>
+      <div class="pill">CUSTOM CODE</div>
+      <div class="pill">OWN IT FOREVER</div>
     </div>
-    <div class="right">
-        <div class="price">P5K</div>
-        <div class="price-sub">starting price</div>
-        <div class="url">webcraftph.com</div>
+  </div>
+
+  <div class="right">
+    <div class="logomark">
+      <svg width="170" height="170" viewBox="0 0 100 100">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#6366f1"/>
+            <stop offset=".5" stop-color="#ec4899"/>
+            <stop offset="1" stop-color="#f59e0b"/>
+          </linearGradient>
+        </defs>
+        <path d="M 18 28 L 32 72 L 42 52 L 50 72 L 58 52 L 68 72 L 82 28"
+          stroke="url(#g)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
     </div>
+    <div class="wordmark">Web<span class="hl">Craft</span><span class="ph">PH</span></div>
+    <div class="url">webcraftph.com</div>
+  </div>
 </div>
+
 </body>
 </html>

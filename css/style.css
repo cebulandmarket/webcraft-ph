@@ -74,26 +74,9 @@ a{color:var(--primary-light);text-decoration:none}
 .photo-process{background:url('../images/process-bg.jpg') center/cover no-repeat fixed}
 .photo-process::before{background:rgba(6,6,20,0.82)}
 
-/* Purple flowing-curves background for the About banner */
-.photo-about{
-  background:
-    /* bright magenta glow, top-left */
-    radial-gradient(ellipse 55% 40% at 12% 22%, rgba(232,121,168,0.55) 0%, rgba(232,121,168,0) 55%),
-    /* warm pink glow, top-right */
-    radial-gradient(ellipse 50% 50% at 88% 30%, rgba(212,48,122,0.48) 0%, rgba(212,48,122,0) 58%),
-    /* deep violet pool, center-bottom */
-    radial-gradient(ellipse 70% 55% at 55% 78%, rgba(93,31,122,0.70) 0%, rgba(93,31,122,0) 62%),
-    /* base gradient — midnight violet to plum */
-    linear-gradient(135deg, #140424 0%, #2a0a3d 40%, #43126a 70%, #2a0a3d 100%);
-  background-attachment: fixed, fixed, fixed, fixed;
-  background-size: cover;
-}
-/* SVG flowing curves overlay — thin pink ridge lines */
-.photo-about::before{
-  background:
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' preserveAspectRatio='xMidYMid slice'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23ff7ab8' stop-opacity='0.18'/><stop offset='1' stop-color='%23ff7ab8' stop-opacity='0'/></linearGradient></defs><g fill='none' stroke='url(%23g)' stroke-width='1.4'><path d='M-50 150 Q300 50 650 230 T1250 180'/><path d='M-50 250 Q300 150 650 330 T1250 280'/><path d='M-50 350 Q300 250 650 430 T1250 380'/><path d='M-50 450 Q300 350 650 530 T1250 480'/><path d='M-50 550 Q300 450 650 630 T1250 580'/><path d='M-50 650 Q300 550 650 730 T1250 680'/></g><g fill='none' stroke='%23ffa6d0' stroke-opacity='0.08' stroke-width='1'><path d='M-50 120 Q350 20 700 220 T1260 170'/><path d='M-50 520 Q350 420 700 620 T1260 570'/></g></svg>") center/cover no-repeat,
-    linear-gradient(180deg, rgba(6,6,20,0.45) 0%, rgba(6,6,20,0.55) 100%);
-}
+/* Purple diamond/chevron background for the About banner */
+.photo-about{background:url('../images/about-bg-purple.jpg') center/cover no-repeat fixed}
+.photo-about::before{background:rgba(6,6,20,0.42)}
 
 .photo-results{background:url('../images/results-bg.jpg') center/cover no-repeat fixed}
 .photo-results::before{background:rgba(6,6,20,0.78)}

@@ -634,29 +634,30 @@ body.light-mode .prose-highlight{color:#111827}
 /* ========== ABOUT PAGE — DARK LUXURY + PEARL SHIMMER ========== */
 body.page-about{
     background:
-        /* Delicate pink highlights (top-left, mid-right) */
-        radial-gradient(ellipse 70% 50% at 18% 10%,rgba(249,212,224,0.22) 0%,rgba(249,212,224,0) 60%),
-        radial-gradient(ellipse 55% 45% at 82% 35%,rgba(232,180,201,0.18) 0%,rgba(232,180,201,0) 65%),
+        /* Delicate pink highlights — bumped for visibility */
+        radial-gradient(ellipse 70% 50% at 18% 10%,rgba(255,190,210,0.40) 0%,rgba(255,190,210,0) 60%),
+        radial-gradient(ellipse 55% 45% at 82% 35%,rgba(240,165,195,0.35) 0%,rgba(240,165,195,0) 65%),
+        radial-gradient(ellipse 50% 45% at 25% 88%,rgba(248,180,205,0.30) 0%,rgba(248,180,205,0) 65%),
         /* Soft violet aura */
-        radial-gradient(ellipse 60% 55% at 85% 15%,rgba(185,165,224,0.14) 0%,rgba(185,165,224,0) 65%),
-        radial-gradient(ellipse 55% 55% at 15% 72%,rgba(150,120,210,0.14) 0%,rgba(150,120,210,0) 65%),
-        /* Pearl shimmer — creamy iridescent highlights */
-        radial-gradient(ellipse 40% 30% at 50% 30%,rgba(255,240,245,0.12) 0%,rgba(255,240,245,0) 70%),
-        radial-gradient(ellipse 35% 28% at 78% 62%,rgba(255,245,238,0.10) 0%,rgba(255,245,238,0) 70%),
+        radial-gradient(ellipse 60% 55% at 88% 12%,rgba(190,165,230,0.26) 0%,rgba(190,165,230,0) 65%),
+        radial-gradient(ellipse 55% 55% at 12% 55%,rgba(155,120,215,0.24) 0%,rgba(155,120,215,0) 65%),
+        /* Pearl shimmer — creamy iridescent highlights, brighter */
+        radial-gradient(ellipse 42% 30% at 50% 28%,rgba(255,235,245,0.28) 0%,rgba(255,235,245,0) 70%),
+        radial-gradient(ellipse 38% 28% at 72% 65%,rgba(255,240,232,0.24) 0%,rgba(255,240,232,0) 70%),
         /* Mid-page dusty rose wash */
-        radial-gradient(ellipse 85% 50% at 50% 52%,rgba(200,140,170,0.12) 0%,rgba(200,140,170,0) 75%),
+        radial-gradient(ellipse 90% 55% at 50% 50%,rgba(215,150,180,0.20) 0%,rgba(215,150,180,0) 75%),
         /* Base navy */
-        linear-gradient(180deg,#08061e 0%,#0d0a2c 45%,#080621 100%);
+        linear-gradient(180deg,#0a0825 0%,#120e38 45%,#0a0826 100%);
     background-attachment:fixed;
     position:relative
 }
-/* Silk-like flowing light band — slowly drifts for that 'silk' motion */
+/* Silk-like flowing light band — visibly drifting for 'silk' motion */
 body.page-about::before{
     content:"";position:fixed;inset:-10%;pointer-events:none;z-index:0;
     background:
-        linear-gradient(110deg,transparent 20%,rgba(255,220,230,0.06) 38%,rgba(230,200,240,0.08) 50%,rgba(255,220,230,0.06) 62%,transparent 80%);
-    filter:blur(40px);
-    animation:silkFlow 24s ease-in-out infinite alternate
+        linear-gradient(110deg,transparent 15%,rgba(255,210,225,0.16) 35%,rgba(235,205,245,0.22) 50%,rgba(255,210,225,0.16) 65%,transparent 85%);
+    filter:blur(50px);
+    animation:silkFlow 22s ease-in-out infinite alternate
 }
 /* Grain + subtle shimmer */
 body.page-about::after{

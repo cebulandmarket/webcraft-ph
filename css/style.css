@@ -631,36 +631,30 @@ body.light-mode .about-prose p{color:#4b5563}
 body.light-mode .prose-emphasis p{color:#111827}
 body.light-mode .prose-highlight{color:#111827}
 
-/* ========== ABOUT PAGE — DARK LUXURY + PEARL SHIMMER ========== */
-body.page-about{
+/* ========== SITE-WIDE DARK LUXURY ATMOSPHERE (hero keeps its own bg) ========== */
+body{
     background:
-        /* Delicate pink highlights — bumped for visibility */
         radial-gradient(ellipse 70% 50% at 18% 10%,rgba(255,190,210,0.40) 0%,rgba(255,190,210,0) 60%),
         radial-gradient(ellipse 55% 45% at 82% 35%,rgba(240,165,195,0.35) 0%,rgba(240,165,195,0) 65%),
         radial-gradient(ellipse 50% 45% at 25% 88%,rgba(248,180,205,0.30) 0%,rgba(248,180,205,0) 65%),
-        /* Soft violet aura */
         radial-gradient(ellipse 60% 55% at 88% 12%,rgba(190,165,230,0.26) 0%,rgba(190,165,230,0) 65%),
         radial-gradient(ellipse 55% 55% at 12% 55%,rgba(155,120,215,0.24) 0%,rgba(155,120,215,0) 65%),
-        /* Pearl shimmer — creamy iridescent highlights, brighter */
         radial-gradient(ellipse 42% 30% at 50% 28%,rgba(255,235,245,0.28) 0%,rgba(255,235,245,0) 70%),
         radial-gradient(ellipse 38% 28% at 72% 65%,rgba(255,240,232,0.24) 0%,rgba(255,240,232,0) 70%),
-        /* Mid-page dusty rose wash */
         radial-gradient(ellipse 90% 55% at 50% 50%,rgba(215,150,180,0.20) 0%,rgba(215,150,180,0) 75%),
-        /* Base navy */
         linear-gradient(180deg,#0a0825 0%,#120e38 45%,#0a0826 100%);
     background-attachment:fixed;
     position:relative
 }
-/* Silk-like flowing light band — visibly drifting for 'silk' motion */
-body.page-about::before{
+/* Silk-like flowing light band — slowly drifts */
+body::before{
     content:"";position:fixed;inset:-10%;pointer-events:none;z-index:0;
-    background:
-        linear-gradient(110deg,transparent 15%,rgba(255,210,225,0.16) 35%,rgba(235,205,245,0.22) 50%,rgba(255,210,225,0.16) 65%,transparent 85%);
+    background:linear-gradient(110deg,transparent 15%,rgba(255,210,225,0.16) 35%,rgba(235,205,245,0.22) 50%,rgba(255,210,225,0.16) 65%,transparent 85%);
     filter:blur(50px);
     animation:silkFlow 22s ease-in-out infinite alternate
 }
-/* Grain + subtle shimmer */
-body.page-about::after{
+/* Barely-visible grain overlay */
+body::after{
     content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.09;mix-blend-mode:overlay;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 0.92 0 0 0 0 0.96 0 0 0 0.7 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")
 }
@@ -669,24 +663,32 @@ body.page-about::after{
     50%{transform:translateX(3%) translateY(2%) rotate(1.5deg)}
     100%{transform:translateX(6%) translateY(-3%) rotate(3deg)}
 }
-@media(prefers-reduced-motion:reduce){
-    body.page-about::before{animation:none}
-}
-/* All content sits above the grain layer */
-body.page-about > *{position:relative;z-index:1}
-/* Strip section backgrounds so the body atmosphere shows through */
-body.page-about .section,
-body.page-about .section-alt,
-body.page-about .page-banner,
-body.page-about .cta-banner{background:transparent;border-bottom-color:rgba(255,255,255,0.06)}
-/* Drop the photo-section imagery; keep a subtle darkening overlay for card contrast */
-body.page-about .photo-section{background:transparent}
-body.page-about .photo-section::before{background:rgba(6,6,26,0.15)}
-/* Frosted cards feel right over the aura */
-body.page-about .result-card,
-body.page-about .about-card,
-body.page-about .about-image{background:rgba(18,16,42,0.55);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 20px 60px rgba(0,0,0,0.35)}
-body.page-about .about-image{padding:0}
+@media(prefers-reduced-motion:reduce){body::before{animation:none}}
+/* Content sits above the grain + silk layers */
+body > *{position:relative;z-index:1}
+/* Hero keeps its own bg — raise it above grain too */
+.hero-portrait{z-index:1}
+/* Strip section backgrounds so the body atmosphere shows through (hero excluded — it sets its own bg) */
+.section,
+.section-alt,
+.page-banner,
+.cta-banner,
+.trusted-section,
+.services-section,
+.experience-section{background:transparent;border-bottom-color:rgba(255,255,255,0.06)}
+/* Photo sections: drop imagery, keep subtle darkening for card contrast */
+.photo-section{background:transparent}
+.photo-section::before{background:rgba(6,6,26,0.15)}
+/* Frosted cards float over the aura */
+.result-card,
+.about-card,
+.about-image,
+.exp-card,
+.problem-card,
+.proc-card,
+.p3-card,
+.bento-card{background:rgba(18,16,42,0.55);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.08);box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+.about-image{padding:0}
 
 /* ========== MOBILE ========== */
 @media(max-width:900px){

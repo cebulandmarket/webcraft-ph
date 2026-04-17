@@ -774,6 +774,50 @@ body > *{position:relative;z-index:1}
     .results-grid{grid-template-columns:1fr}
 }
 
+/* Very narrow phones: stack portrait + floating cards in normal flow */
+@media(max-width:500px){
+    .hp-stage{
+        height:auto !important;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:.9rem;
+        padding:1rem 0 0;
+    }
+    .hp-portrait{
+        position:relative !important;
+        left:auto !important;
+        bottom:auto !important;
+        transform:none !important;
+        height:auto !important;
+        width:75%;
+        max-width:320px;
+        margin:0 auto;
+    }
+    .hp-card,
+    .hp-card-left,
+    .hp-card-right{
+        position:relative !important;
+        left:auto !important;
+        right:auto !important;
+        bottom:auto !important;
+        top:auto !important;
+        max-width:92% !important;
+        width:92%;
+        margin:0 auto;
+        animation:none !important;
+    }
+    .hp-card-stat-sub{display:block}
+    .hp-card p{font-size:.8rem;line-height:1.5}
+    .hp-logos{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:.45rem;
+        padding:0 .5rem;
+    }
+    .hp-logo{font-size:.68rem;padding:.3rem .55rem}
+}
+
 /* ===== Scroll-reveal: ONLY the About-page images animate (text stays still) ===== */
 /* Kill the generic .reveal fade-up on about-split so text doesn't move */
 .about-split.reveal { opacity: 1; transform: none; transition: none; }

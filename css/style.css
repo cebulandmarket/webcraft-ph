@@ -130,7 +130,8 @@ a{color:var(--primary-light);text-decoration:none}
 .menu-toggle span{display:block;width:100%;height:2px;background:var(--white);border-radius:2px;transition:.3s}
 
 /* ========== HERO (portrait style) ========== */
-.hero-portrait{position:relative;min-height:100vh;padding:7rem 0 3rem;overflow:hidden;background:linear-gradient(135deg,#fdf6f3 0%,#f6ecf7 45%,#efe6f9 100%);color:#0f0f2e}
+.hero-portrait{position:relative;min-height:100vh;padding:7rem 0 3rem;overflow:hidden;background:#f4c2c8 url('../images/hero-bg-pink.jpg') center/cover no-repeat;color:#0f0f2e}
+.hero-portrait::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0.35) 0%,rgba(255,255,255,0) 45%,rgba(255,255,255,0.15) 100%);pointer-events:none;z-index:1}
 .hero-portrait .hp-inner{position:relative;z-index:2;text-align:center;max-width:1200px}
 .hp-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
 .hp-orb-pink{width:520px;height:520px;top:-60px;right:-80px;background:radial-gradient(circle,#fbc9d9 0%,rgba(251,201,217,0) 70%)}
@@ -174,7 +175,7 @@ a{color:var(--primary-light);text-decoration:none}
 @keyframes floatRight{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 
 /* Light mode — hero keeps its own palette */
-body.light-mode .hero-portrait{background:linear-gradient(135deg,#fdf6f3 0%,#f6ecf7 45%,#efe6f9 100%);color:#0f0f2e}
+body.light-mode .hero-portrait{background:#f4c2c8 url('../images/hero-bg-pink.jpg') center/cover no-repeat;color:#0f0f2e}
 
 /* Nav adjustments when sitting over the light portrait hero */
 body:has(.hero-portrait) .nav:not(.scrolled) .logo{color:#0a0820}

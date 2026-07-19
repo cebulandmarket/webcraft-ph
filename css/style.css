@@ -115,6 +115,7 @@ a{color:var(--primary-light);text-decoration:none}
 .btn-cyan{background:#0891b2;color:var(--white);border-color:#0891b2}.btn-cyan:hover{background:#0e7490;transform:translateY(-2px)}
 .btn-amber{background:#d97706;color:var(--white);border-color:#d97706}.btn-amber:hover{background:#b45309;transform:translateY(-2px)}
 .btn-emerald{background:#16a34a;color:var(--white);border-color:#16a34a}.btn-emerald:hover{background:#15803d;transform:translateY(-2px)}
+.btn-navy{background:#1e40af;color:var(--white);border-color:#1e40af}.btn-navy:hover{background:#1e3a8a;transform:translateY(-2px)}
 
 /* ========== NAV ========== */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.75rem 0;transition:all .3s}
@@ -326,6 +327,7 @@ body.light-mode .exp-tags span{background:#f9fafb;border-color:#e5e7eb}
 .badge-cyan{background:rgba(8,145,178,0.1);color:#22d3ee}.pulse-cyan{background:#06b6d4}
 .badge-amber{background:rgba(217,119,6,0.1);color:#f59e0b}.pulse-amber{background:#f59e0b}
 .badge-emerald{background:rgba(22,163,74,0.1);color:#22c55e}.pulse-emerald{background:#22c55e}
+.badge-navy{background:rgba(30,64,175,0.12);color:#60a5fa}.pulse-navy{background:#1e40af}
 .showcase-info h3{font-size:1.5rem;margin-bottom:.4rem}
 .showcase-info > p{color:var(--gray);font-size:.88rem;margin-bottom:1rem;line-height:1.65}
 .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .6rem;margin-bottom:1rem}

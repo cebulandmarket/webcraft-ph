@@ -117,6 +117,7 @@ a{color:var(--primary-light);text-decoration:none}
 .btn-emerald{background:#16a34a;color:var(--white);border-color:#16a34a}.btn-emerald:hover{background:#15803d;transform:translateY(-2px)}
 .btn-navy{background:#1e40af;color:var(--white);border-color:#1e40af}.btn-navy:hover{background:#1e3a8a;transform:translateY(-2px)}
 .btn-terracotta{background:#c2622d;color:var(--white);border-color:#c2622d}.btn-terracotta:hover{background:#9e4e22;transform:translateY(-2px)}
+.btn-blue{background:#2563eb;color:var(--white);border-color:#2563eb}.btn-blue:hover{background:#1d4ed8;transform:translateY(-2px)}
 
 /* ========== NAV ========== */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.75rem 0;transition:all .3s}
@@ -330,6 +331,7 @@ body.light-mode .exp-tags span{background:#f9fafb;border-color:#e5e7eb}
 .badge-emerald{background:rgba(22,163,74,0.1);color:#22c55e}.pulse-emerald{background:#22c55e}
 .badge-navy{background:rgba(30,64,175,0.12);color:#60a5fa}.pulse-navy{background:#1e40af}
 .badge-terracotta{background:rgba(194,98,45,0.12);color:#e0793d}.pulse-terracotta{background:#c2622d}
+.showcase-badge.badge-blue{background:rgba(37,99,235,0.12);color:#60a5fa}.pulse-blue{background:#2563eb}
 .showcase-info h3{font-size:1.5rem;margin-bottom:.4rem}
 .showcase-info > p{color:var(--gray);font-size:.88rem;margin-bottom:1rem;line-height:1.65}
 .feature-list{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .6rem;margin-bottom:1rem}

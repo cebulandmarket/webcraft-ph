@@ -495,6 +495,14 @@ body.light-mode .p3-featured,
 }
 .p3-amount, .p3-amount-featured,
 body.light-mode .p3-featured .p3-amount { color: var(--ink) !important; }
+.p3-usd {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--muted);
+    margin: -0.15rem 0 0.55rem;
+}
 .p3-peso { font-family: "Fraunces", Georgia, serif; color: var(--muted); }
 .p3-delivery {
     background: none;
